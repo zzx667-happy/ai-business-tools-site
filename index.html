@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI生意工具站 | 可变现资源导航</title>
+    <meta
+      name="description"
+      content="一个可上线运营的AI工具资源站原型，包含资源筛选、赞助位、会员入口、收益估算和客户线索表单。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="AI生意工具站首页">
+        <span class="brand-mark">A</span>
+        <span>
+          <strong>AI生意工具站</strong>
+          <small>资源导航 · 赞助 · 会员</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="#tools">工具库</a>
+        <a href="#pricing">会员</a>
+        <a href="#calculator">收益估算</a>
+        <a href="#contact">合作</a>
+      </nav>
+      <button class="icon-button menu-button" type="button" aria-label="打开菜单" data-menu-button>
+        <i data-lucide="menu"></i>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">适合新手启动的可变现网站模型</p>
+          <h1>做一个能持续带来线索和收入的 AI 工具资源站</h1>
+          <p class="hero-text">
+            先用内容吸引流量，再通过广告位、工具赞助、会员下载和咨询线索变现。这个页面已经把核心运营模块做成可交互原型。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#tools">
+              <i data-lucide="search"></i>
+              浏览工具库
+            </a>
+            <a class="secondary-action" href="#calculator">
+              <i data-lucide="calculator"></i>
+              估算收入
+            </a>
+          </div>
+          <div class="metrics" aria-label="网站核心指标示例">
+            <div>
+              <strong data-count="128">0</strong>
+              <span>收录工具</span>
+            </div>
+            <div>
+              <strong data-count="16">0</strong>
+              <span>赞助席位</span>
+            </div>
+            <div>
+              <strong data-count="4">0</strong>
+              <span>收入渠道</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="网站运营看板示意图">
+          <img src="./assets/hero-dashboard.png" alt="AI工具资源站运营看板" />
+        </div>
+      </section>
+
+      <section class="revenue-strip" aria-label="变现方式">
+        <article>
+          <i data-lucide="badge-dollar-sign"></i>
+          <span>广告联盟</span>
+        </article>
+        <article>
+          <i data-lucide="handshake"></i>
+          <span>工具赞助</span>
+        </article>
+        <article>
+          <i data-lucide="download"></i>
+          <span>会员资源</span>
+        </article>
+        <article>
+          <i data-lucide="messages-square"></i>
+          <span>咨询线索</span>
+        </article>
+      </section>
+
+      <section class="section" id="tools">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">动态工具库</p>
+            <h2>让用户能搜索、筛选、收藏</h2>
+          </div>
+          <button class="ghost-button" type="button" data-reset>
+            <i data-lucide="rotate-ccw"></i>
+            重置
+          </button>
+        </div>
+
+        <div class="tool-controls">
+          <label class="search-box">
+            <i data-lucide="search"></i>
+            <input type="search" placeholder="搜索：写作、图片、视频、自动化..." data-search />
+          </label>
+          <div class="segmented" role="list" aria-label="工具分类" data-filters>
+            <button type="button" class="active" data-category="全部">全部</button>
+            <button type="button" data-category="写作">写作</button>
+            <button type="button" data-category="图片">图片</button>
+            <button type="button" data-category="视频">视频</button>
+            <button type="button" data-category="运营">运营</button>
+          </div>
+        </div>
+
+        <div class="content-grid">
+          <div>
+            <div class="tool-grid" data-tool-grid></div>
+            <p class="empty-state" data-empty hidden>没有匹配的工具，换个关键词试试。</p>
+          </div>
+
+          <aside class="sponsor-panel" aria-label="赞助位">
+            <div class="ad-label">赞助位</div>
+            <img src="./assets/sponsor-banner.png" alt="赞助广告示例" />
+            <h3>每周推荐位</h3>
+            <p>把这里卖给 AI 工具、课程、SaaS 服务或本地企业，按周或按月收费。</p>
+            <button class="primary-action full" type="button" data-open-modal="sponsor">
+              <i data-lucide="megaphone"></i>
+              申请赞助
+            </button>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section pricing" id="pricing">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">会员下载</p>
+            <h2>付费内容先做轻量版</h2>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <span class="plan">免费版</span>
+            <strong>¥0</strong>
+            <p>公开工具库、基础教程、每周更新邮件。</p>
+            <button class="secondary-action full" type="button" data-open-modal="free">
+              <i data-lucide="mail-plus"></i>
+              订阅更新
+            </button>
+          </article>
+          <article class="price-card featured">
+            <span class="plan">会员版</span>
+            <strong>¥29/月</strong>
+            <p>AI 提示词模板、行业清单、自动化流程包和案例拆解。</p>
+            <a class="primary-action full" href="#contact">
+              <i data-lucide="crown"></i>
+              先收意向
+            </a>
+          </article>
+          <article class="price-card">
+            <span class="plan">企业合作</span>
+            <strong>¥499起</strong>
+            <p>工具测评、内容合作、独立专题页和私域导流。</p>
+            <button class="secondary-action full" type="button" data-open-modal="business">
+              <i data-lucide="briefcase-business"></i>
+              咨询合作
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section calculator-section" id="calculator">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">收益估算器</p>
+            <h2>先算清楚流量和转化</h2>
+          </div>
+        </div>
+
+        <div class="calculator">
+          <div class="calc-controls">
+            <label>
+              每月访问量
+              <input type="range" min="1000" max="200000" step="1000" value="20000" data-visits />
+              <span data-visits-value>20,000</span>
+            </label>
+            <label>
+              会员转化率
+              <input type="range" min="0.1" max="5" step="0.1" value="1.2" data-conversion />
+              <span data-conversion-value>1.2%</span>
+            </label>
+            <label>
+              赞助单价/月
+              <input type="range" min="100" max="5000" step="100" value="800" data-sponsor />
+              <span data-sponsor-value>¥800</span>
+            </label>
+          </div>
+          <div class="calc-result">
+            <span>预估月收入</span>
+            <strong data-revenue>¥0</strong>
+            <p>会员收入 + 2 个赞助位 + 基础广告收入。实际结果取决于内容质量、SEO、转化页和持续更新。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section roadmap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">运营路线</p>
+            <h2>按这个节奏从 0 到上线</h2>
+          </div>
+        </div>
+        <div class="timeline">
+          <article>
+            <span>01</span>
+            <h3>确定细分领域</h3>
+            <p>先选“AI写作”“跨境运营”“短视频工具”这类人群明确的主题。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>持续发布内容</h3>
+            <p>每周新增工具测评、教程、清单，给搜索引擎和用户留下可回访理由。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>接入收益入口</h3>
+            <p>有流量后接广告联盟、赞助位、会员资料包、咨询表单。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">线索收集</p>
+            <h2>把访客变成可联系的人</h2>
+          </div>
+        </div>
+        <form class="lead-form" data-lead-form>
+          <label>
+            你的称呼
+            <input name="name" required placeholder="例如：张三" />
+          </label>
+          <label>
+            联系方式
+            <input name="contact" required placeholder="微信 / 邮箱 / 手机" />
+          </label>
+          <label>
+            你想了解
+            <select name="interest">
+              <option>赞助合作</option>
+              <option>会员资源</option>
+              <option>建站服务</option>
+              <option>AI工具推荐</option>
+            </select>
+          </label>
+          <label class="wide">
+            备注
+            <textarea name="message" placeholder="简单写一下你的需求"></textarea>
+          </label>
+          <button class="primary-action" type="submit">
+            <i data-lucide="send"></i>
+            提交意向
+          </button>
+          <p class="form-status" data-form-status role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 AI生意工具站</span>
+      <span>把 `app.js` 里的示例数据换成你的真实内容即可运营。</span>
+    </footer>
+
+    <div class="modal" data-modal hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="icon-button modal-close" type="button" aria-label="关闭" data-close-modal>
+          <i data-lucide="x"></i>
+        </button>
+        <h2 id="modal-title" data-modal-title>提交意向</h2>
+        <p data-modal-copy>留下联系方式，我会尽快联系你。</p>
+        <form class="mini-form" data-mini-form>
+          <input name="contact" required placeholder="微信 / 邮箱 / 手机" />
+          <button class="primary-action" type="submit">发送</button>
+        </form>
+      </section>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
