@@ -208,6 +208,58 @@ const tools = [
   },
 ];
 
+
+const infoDetails = {
+  "rank-writing": {
+    title: "写作榜：从低门槛内容接单开始",
+    summary: "适合刚开始做 AI 副业的人：成本低、交付快、能用作品集证明能力。",
+    blocks: [
+      ["为什么值得做", ["ChatGPT、Claude、Gemini 都适合做提纲、摘要、改写和脚本初稿。", "Google 强调有帮助、可靠、以人为本的内容，所以卖点应是人工校对后的内容服务。"]],
+      ["具体怎么赚钱", ["小红书笔记 99-199 元/篇。", "公众号文章 199-499 元/篇。", "月度内容包：4 篇文章 + 8 条短视频脚本，可收 699-1999 元。"]],
+      ["落地步骤", ["选一个行业，例如本地餐饮、职场简历、母婴、装修。", "做 10 篇样稿，展示标题、正文、封面提示词。", "在网站里用免费模板收集客户联系方式。"]],
+    ],
+    sources: [{ label: "OpenAI ChatGPT", url: "https://openai.com/chatgpt/" }, { label: "Google helpful content", url: "https://developers.google.com/search/docs/fundamentals/creating-helpful-content" }],
+  },
+  "rank-image": {
+    title: "图片榜：电商和本地商家更容易付费",
+    summary: "图片类服务结果直观，客户能马上判断是否好看，适合做套餐和复购。",
+    blocks: [
+      ["依据", ["Canva Magic Studio、剪映、即梦等工具降低了商品图、海报和封面制作门槛。", "商家长期需要活动图、商品图和种草封面，比一次性尝鲜更容易复购。"]],
+      ["具体怎么赚钱", ["单张商品场景图 29-99 元。", "10 张商品图套餐 299-699 元。", "每月 20 张海报维护服务 399-999 元。"]],
+      ["落地步骤", ["先做餐饮、服饰、美妆、课程四类样图。", "页面放前后对比图和报价。", "用表单收集客户图片、品牌色、尺寸和用途。"]],
+    ],
+    sources: [{ label: "Canva Magic Studio", url: "https://www.canva.com/magic/" }, { label: "即梦 AI", url: "https://jimeng.jianying.com/" }],
+  },
+  "rank-video": {
+    title: "视频榜：脚本和批量产出比炫技更值钱",
+    summary: "视频生成工具很多，但客户真正需要的是稳定选题、脚本和可发布素材。",
+    blocks: [
+      ["依据", ["Runway、剪映等工具降低了视频生成和剪辑门槛。", "短视频运营更看重持续产出，脚本库和模板包适合会员化。"]],
+      ["具体怎么赚钱", ["单条口播脚本 49-199 元。", "单条数字人口播 99-399 元。", "月度 30 条脚本或视频素材 999-2999 元。"]],
+      ["落地步骤", ["先做 5 个行业脚本模板：餐饮、教培、家政、职场、电商。", "每个模板包含开头钩子、镜头、口播、字幕和 CTA。", "点击卡片后引导用户留联系方式领取样例。"]],
+    ],
+    sources: [{ label: "Runway", url: "https://runwayml.com/" }, { label: "剪映", url: "https://www.capcut.cn/" }],
+  },
+  "rank-operation": {
+    title: "运营榜：用自动化把流量变成线索",
+    summary: "网站要赚钱，不能只展示内容，还要把访客变成可跟进的人。",
+    blocks: [
+      ["依据", ["Zapier、飞书多维表格可把表单、表格、通知和邮件串起来。", "Stripe Payment Links 支持不用写支付后台创建付款链接。"]],
+      ["具体怎么赚钱", ["给商家搭表单 + 通知流程 499-1999 元。", "自动化维护按月 199-999 元。", "本站可以用资料包和赞助合作表单先收集线索。"]],
+      ["落地步骤", ["先接一个表单工具。", "提交后写入表格并通知你。", "再根据用户选择发送资料包、报价或付款链接。"]],
+    ],
+    sources: [{ label: "Zapier AI", url: "https://zapier.com/ai" }, { label: "Stripe Payment Links", url: "https://docs.stripe.com/payment-links" }],
+  },
+  "guide-xhs": { title: "教程：10 篇小红书笔记样稿", summary: "用来展示能力并引导客户购买代写或模板包。", blocks: [["内容结构", ["每篇包含：人群痛点、标题、正文、封面提示词、标签。", "按行业做样稿，不要泛泛写 AI 文案。"]], ["收益设计", ["免费展示 2 篇，完整 10 篇做资料包。", "引导用户提交需求，转化为代写服务。"]]], sources: [{ label: "Google helpful content", url: "https://developers.google.com/search/docs/fundamentals/creating-helpful-content" }] },
+  "guide-product": { title: "教程：AI 商品场景图", summary: "把客户商品照变成可发布的主图、场景图和详情页配图。", blocks: [["操作要点", ["收集商品原图、尺寸、品牌色和用途。", "生成后人工检查商品是否变形、文字是否错误。"]], ["收益设计", ["单张图低价引流，套餐和月度维护赚钱。", "页面展示前后对比最容易成交。"]]], sources: [{ label: "Canva Magic Studio", url: "https://www.canva.com/magic/" }] },
+  "guide-leads": { title: "教程：自动获客表单", summary: "让网站不只是展示，而是能持续收集客户。", blocks: [["流程", ["表单收集称呼、联系方式、需求。", "写入表格，自动通知，按需求分类跟进。"]], ["收益设计", ["自己用来收线索。", "也可以卖给商家做获客系统。"]]], sources: [{ label: "飞书多维表格", url: "https://www.feishu.cn/product/base" }, { label: "Zapier AI", url: "https://zapier.com/ai" }] },
+  "guide-seo": { title: "教程：SEO 工具测评流量", summary: "通过长尾关键词持续获得搜索流量，再承接广告、赞助和会员。", blocks: [["内容方法", ["写真实测试、优缺点、适用人群和替代方案。", "每篇文章自然引导资料包或咨询。"]], ["收益设计", ["前期做赞助位和线索。", "内容稳定后申请广告联盟和工具返佣。"]]], sources: [{ label: "Google Search Central", url: "https://developers.google.com/search/docs/fundamentals/creating-helpful-content" }, { label: "AdSense", url: "https://support.google.com/adsense/answer/9724" }] },
+  "kit-title": { title: "资料包：100 条爆款标题模板", summary: "适合低价引流，卖点是节省用户想标题的时间。", blocks: [["包含内容", ["小红书、公众号、短视频三类标题。", "按痛点、清单、对比、案例、避坑分类。"]], ["变现", ["9 元低价包。", "购买后引导升级会员或代写服务。"]]], sources: [{ label: "OpenAI ChatGPT", url: "https://openai.com/chatgpt/" }] },
+  "kit-review": { title: "资料包：AI 工具测评表", summary: "帮助用户判断工具是否值得买，也帮助网站持续产出测评内容。", blocks: [["字段", ["工具名、价格、适用人群、优点、缺点、替代品、变现方式。", "加入真实测试截图和评分。"]], ["变现", ["会员下载。", "工具厂商可购买赞助测评位。"]]], sources: [{ label: "Google helpful content", url: "https://developers.google.com/search/docs/fundamentals/creating-helpful-content" }] },
+  "kit-sales": { title: "资料包：商单报价话术", summary: "把赞助位、测评文、专题页和私域导流做成标准报价。", blocks: [["包含内容", ["首封报价、追问需求、确认排期、催付款、交付验收。", "不同流量阶段的报价区间。"]], ["变现", ["19 元资料包。", "也可以作为企业合作页面的销售材料。"]]], sources: [{ label: "Stripe Payment Links", url: "https://docs.stripe.com/payment-links" }] },
+  "kit-calendar": { title: "资料包：30 天内容更新计划", summary: "解决网站最大问题：持续更新。", blocks: [["包含内容", ["每天一个主题：工具测评、教程、对比、案例、清单。", "每篇内容对应一个转化入口。"]], ["变现", ["会员资料。", "也可以卖给想做内容站的人做代运营服务。"]]], sources: [{ label: "Google Search Central", url: "https://developers.google.com/search/docs/fundamentals/creating-helpful-content" }] },
+};
+
 const modalCopy = {
   sponsor: { title: "申请赞助位", copy: "留下联系方式，后续可以接入真实报价、排期和付款链接。" },
   free: { title: "订阅免费更新", copy: "把新工具和教程发给订阅用户，后续转化为会员或咨询客户。" },
@@ -303,6 +355,22 @@ function openToolDetail(name) {
   modal.hidden = false;
 }
 
+
+function openInfoDetail(key) {
+  const detail = infoDetails[key];
+  if (!detail) return;
+  const modal = document.querySelector("[data-modal]");
+  document.querySelector("[data-modal-title]").textContent = detail.title;
+  document.querySelector("[data-modal-copy]").innerHTML = `
+    <p class="detail-summary">${detail.summary}</p>
+    <div class="detail-grid">
+      ${detail.blocks.map(([title, items]) => `<section><h3>${title}</h3>${detailList(items)}</section>`).join("")}
+    </div>
+    <div class="detail-sources"><strong>参考来源：</strong>${sourceLinks(detail.sources)}</div>
+  `;
+  modal.hidden = false;
+}
+
 function closeModal() { document.querySelector("[data-modal]").hidden = true; }
 
 document.addEventListener("click", (event) => {
@@ -322,6 +390,8 @@ document.addEventListener("click", (event) => {
   }
   const detailCard = event.target.closest("[data-tool-detail]");
   if (detailCard) openToolDetail(detailCard.dataset.toolDetail);
+  const infoCard = event.target.closest("[data-info-detail]");
+  if (infoCard) openInfoDetail(infoCard.dataset.infoDetail);
   if (event.target.closest("[data-reset]")) {
     state.query = "";
     document.querySelector("[data-search]").value = "";
@@ -334,9 +404,14 @@ document.addEventListener("click", (event) => {
 
 document.addEventListener("keydown", (event) => {
   const detailCard = event.target.closest?.("[data-tool-detail]");
+  const infoCard = event.target.closest?.("[data-info-detail]");
   if (detailCard && (event.key === "Enter" || event.key === " ")) {
     event.preventDefault();
     openToolDetail(detailCard.dataset.toolDetail);
+  }
+  if (infoCard && (event.key === "Enter" || event.key === " ")) {
+    event.preventDefault();
+    openInfoDetail(infoCard.dataset.infoDetail);
   }
   if (event.key === "Escape") closeModal();
 });
