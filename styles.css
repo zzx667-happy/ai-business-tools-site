@@ -500,6 +500,94 @@ img {
   font-weight: 700;
 }
 
+.domestic-section {
+  background: #f8fbff;
+}
+
+.domestic-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.domestic-card,
+.domestic-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(25, 36, 31, 0.06);
+}
+
+.domestic-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.domestic-head span {
+  display: inline-grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  color: white;
+  font-weight: 800;
+  background: var(--blue);
+  border-radius: 8px;
+}
+
+.domestic-head strong {
+  color: var(--accent-dark);
+  white-space: nowrap;
+}
+
+.domestic-card h3,
+.domestic-rail h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.domestic-card p,
+.domestic-rail p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.qr-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.qr-slot {
+  display: grid;
+  gap: 8px;
+  min-height: 140px;
+  padding: 14px;
+  place-items: center;
+  text-align: center;
+  color: var(--muted);
+  background: linear-gradient(180deg, rgba(15, 138, 106, 0.04), rgba(255, 255, 255, 1));
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+}
+
+.qr-slot strong {
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.copy-status {
+  margin: 0;
+  color: var(--accent-dark) !important;
+  font-weight: 700;
+}
+
 .section {
   padding: clamp(58px, 7vw, 96px) clamp(20px, 5vw, 72px);
 }
@@ -1145,7 +1233,8 @@ input[type="range"] {
   .hero,
   .content-grid,
   .calculator,
-  .pricing-grid {
+  .pricing-grid,
+  .domestic-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1172,6 +1261,10 @@ input[type="range"] {
   .quick-grid,
   .kit-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .qr-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1205,6 +1298,10 @@ input[type="range"] {
   .quick-grid,
   .kit-grid,
   .lead-form {
+    grid-template-columns: 1fr;
+  }
+
+  .domestic-grid {
     grid-template-columns: 1fr;
   }
 

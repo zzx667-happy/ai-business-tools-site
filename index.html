@@ -19,6 +19,7 @@
       <nav class="nav" aria-label="主导航">
         <a href="#rank">今日榜单</a>
         <a href="#revenue">收益</a>
+        <a href="#domestic">国内成交</a>
         <a href="#tools">工具库</a>
         <a href="#guides">教程</a>
         <a href="#kits">资料包</a>
@@ -34,7 +35,7 @@
         <div class="hero-copy">
           <p class="eyebrow">每天更新的 AI 赚钱工具导航</p>
           <h1>找工具、学教程、拿模板，直接开始做 AI 副业</h1>
-          <p class="hero-text">这里不是空壳首页。你可以先卖赞助位、资料包和咨询，把流量变成订单；也可以浏览工具榜单、查看教程、领取资料包。后续接入广告、会员和支付链接后就能正式变现。</p>
+          <p class="hero-text">这里不是空壳首页。你可以先卖赞助位、资料包和咨询，把流量变成订单；国内用户可以直接走微信、支付宝和企业微信。后续接入广告、会员和支付链接后就能正式变现。</p>
           <div class="hero-actions">
             <a class="primary-action" href="#rank"><i data-lucide="trending-up"></i>看今日榜单</a>
             <a class="secondary-action" href="#kits"><i data-lucide="download"></i>领取资料包</a>
@@ -141,6 +142,56 @@
         </div>
       </section>
 
+      <section class="section domestic-section" id="domestic" aria-label="国内成交方式">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">国内成交</p>
+            <h2>微信、支付宝、企业微信，用户来了就能下单</h2>
+          </div>
+          <button class="ghost-button" type="button" data-open-modal="domestic"><i data-lucide="scan-line"></i>查看下单说明</button>
+        </div>
+        <div class="domestic-grid">
+          <article class="domestic-card">
+            <div class="domestic-head">
+              <span>01</span>
+              <strong>微信收款</strong>
+            </div>
+            <h3>9 元资料包和 99 元咨询最容易先卖出去</h3>
+            <p>先用微信收款码成交小额产品，用户最熟悉，转化最快。</p>
+            <button class="primary-action full" type="button" data-copy-text="你好，我想购买 AI 副业资料包/咨询服务，请发我微信收款码和下单说明。" data-copy-label="复制微信话术"><i data-lucide="copy"></i>复制微信话术</button>
+          </article>
+          <article class="domestic-card">
+            <div class="domestic-head">
+              <span>02</span>
+              <strong>支付宝收款</strong>
+            </div>
+            <h3>适合课程、模板包和高频复购</h3>
+            <p>把支付宝作为备用收款方式，方便不同用户直接付款。</p>
+            <button class="secondary-action full" type="button" data-copy-text="你好，我想直接支付宝下单，请发我付款链接或收款码。" data-copy-label="复制支付宝话术"><i data-lucide="copy"></i>复制支付宝话术</button>
+          </article>
+          <article class="domestic-card">
+            <div class="domestic-head">
+              <span>03</span>
+              <strong>企业微信 / 表单</strong>
+            </div>
+            <h3>先收需求，再发报价和交付时间</h3>
+            <p>适合赞助位、建站和代做服务，能把咨询变成长期客户。</p>
+            <button class="secondary-action full" type="button" data-open-modal="business"><i data-lucide="messages-square"></i>去发需求</button>
+          </article>
+          <aside class="domestic-rail">
+            <div class="ad-label">收款位预留</div>
+            <h3>把你的二维码放这里</h3>
+            <div class="qr-grid">
+              <div class="qr-slot"><strong>微信收款码</strong><span>替换成真实二维码图片</span></div>
+              <div class="qr-slot"><strong>支付宝收款码</strong><span>替换成真实二维码图片</span></div>
+            </div>
+            <p class="copy-status" data-copy-status>点击按钮可复制下单话术。</p>
+            <p>你把真实二维码文件放进 `assets/` 后，我也可以继续帮你接成可点开的收款页。</p>
+            <button class="primary-action full" type="button" data-open-modal="domestic"><i data-lucide="scan-line"></i>查看下单说明</button>
+          </aside>
+        </div>
+      </section>
+
       <section class="quick-grid" id="rank" aria-label="今日榜单">
         <article class="clickable-card" tabindex="0" role="button" data-info-detail="rank-writing"><i data-lucide="pen-line"></i><h2>写作榜</h2><p>文案快写、简历优化、合同清单</p><span class="detail-link">点击查看榜单方案</span></article>
         <article class="clickable-card" tabindex="0" role="button" data-info-detail="rank-image"><i data-lucide="image-plus"></i><h2>图片榜</h2><p>产品图生成、海报工厂、头像设计</p><span class="detail-link">点击查看榜单方案</span></article>
@@ -222,7 +273,7 @@
         <form class="lead-form" data-lead-form>
           <label>你的称呼<input name="name" required placeholder="例如：张三" /></label>
           <label>联系方式<input name="contact" required placeholder="微信 / 邮箱 / 手机" /></label>
-          <label>你想了解<select name="interest"><option>领取资料包</option><option>赞助合作</option><option>会员资源</option><option>建站服务</option></select></label>
+          <label>你想了解<select name="interest"><option>领取资料包</option><option>微信下单</option><option>支付宝下单</option><option>赞助合作</option><option>会员资源</option><option>建站服务</option></select></label>
           <label class="wide">备注<textarea name="message" placeholder="写清楚预算、需求、交付时间和你想要的结果"></textarea></label>
           <button class="primary-action" type="submit"><i data-lucide="send"></i>提交并获取报价</button>
           <p class="form-status" data-form-status role="status"></p>

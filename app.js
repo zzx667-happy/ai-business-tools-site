@@ -264,6 +264,7 @@ const modalCopy = {
   sponsor: { title: "申请赞助位", copy: "留下联系方式，后续可以接入真实报价、排期和付款链接。" },
   free: { title: "订阅免费更新", copy: "把新工具和教程发给订阅用户，后续转化为会员或咨询客户。" },
   business: { title: "企业合作咨询", copy: "适合工具测评、专题页、内容合作和私域导流。" },
+  domestic: { title: "国内下单说明", copy: "微信、支付宝和企业微信都能接单。先放收款码，再用表单收需求和交付信息。" },
 };
 
 const state = { category: "全部", query: "", saved: new Set(JSON.parse(localStorage.getItem("savedTools") || "[]")) };
@@ -373,6 +374,24 @@ function openInfoDetail(key) {
 
 function closeModal() { document.querySelector("[data-modal]").hidden = true; }
 
+async function copyText(text, label) {
+  const status = document.querySelector("[data-copy-status]");
+  try {
+    await navigator.clipboard.writeText(text);
+    if (status) status.textContent = `${label}已复制，可以直接发给客户。`;
+  } catch {
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.style.position = "fixed";
+    textarea.style.left = "-9999px";
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+    if (status) status.textContent = `${label}已复制，可以直接发给客户。`;
+  }
+}
+
 document.addEventListener("click", (event) => {
   if (event.target.closest("[data-menu-button]")) document.body.classList.toggle("menu-open");
   const filter = event.target.closest("[data-category]");
@@ -399,6 +418,8 @@ document.addEventListener("click", (event) => {
   }
   const modalTrigger = event.target.closest("[data-open-modal]");
   if (modalTrigger) openModal(modalTrigger.dataset.openModal);
+  const copyButton = event.target.closest("[data-copy-text]");
+  if (copyButton) copyText(copyButton.dataset.copyText, copyButton.dataset.copyLabel || "内容");
   if (event.target.closest("[data-close-modal]")) closeModal();
 });
 
