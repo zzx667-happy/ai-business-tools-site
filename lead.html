@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>提交需求 | 智盈精选</title>
+    <meta name="description" content="提交资料包、推广链接、赞助合作或本地商家获客需求。" />
+    <link rel="canonical" href="https://zzx667-happy.github.io/ai-business-tools-site/lead.html" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar simple-topbar">
+      <a class="brand" href="./index.html" aria-label="返回智盈精选首页"><span class="brand-mark">盈</span><span><strong>智盈精选</strong><small>需求表单</small></span></a>
+      <nav class="nav" aria-label="需求页面导航"><a href="./index.html">首页</a><a href="./privacy.html">隐私政策</a><a href="./terms.html">用户协议</a></nav>
+    </header>
+    <main class="legal-page">
+      <article class="legal-card">
+        <p class="eyebrow">线索表单</p>
+        <h1>提交需求</h1>
+        <p>当前为站内临时表单，提交后只保存在本机浏览器。正式收件需要你本人配置飞书表单、问卷星或腾讯问卷公开链接。</p>
+        <form class="lead-form embedded-form" data-lead-page-form>
+          <label>你的称呼<input name="name" required placeholder="例如：张三" /></label>
+          <label>联系方式<input name="contact" required placeholder="微信 / 邮箱 / 手机" /></label>
+          <label>需求类型<select name="interest" data-interest><option>购买资料包</option><option>商家获客页</option><option>赞助合作</option><option>联盟推广合作</option><option>网站建设咨询</option></select></label>
+          <label class="wide">具体需求<textarea name="message" placeholder="请写清楚想要的资料包、服务场景、预算或合作方式"></textarea></label>
+          <label class="wide consent-line"><input name="consent" type="checkbox" required /> 我已阅读并同意 <a href="./privacy.html">隐私政策</a>、<a href="./terms.html">用户协议</a> 和 <a href="./disclaimer.html">免责声明</a>。</label>
+          <p class="wide form-note">请勿提交身份证号、银行卡号、账号密码等敏感信息。</p>
+          <button class="primary-action" type="submit"><i data-lucide="send"></i>提交需求</button>
+          <p class="form-status" data-lead-page-status role="status"></p>
+        </form>
+      </article>
+    </main>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="./monetization.js"></script>
+    <script src="./lead.js"></script>
+  </body>
+</html>

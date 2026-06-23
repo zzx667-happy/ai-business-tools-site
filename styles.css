@@ -1111,6 +1111,12 @@ input[type="range"] {
   padding: 20px;
 }
 
+.kit-link-card {
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+}
+
 .kit-grid svg {
   color: var(--accent);
 }
@@ -1127,6 +1133,64 @@ input[type="range"] {
 .kit-grid strong {
   color: var(--gold);
   font-size: 22px;
+}
+
+.checkout-page {
+  background:
+    linear-gradient(180deg, rgba(223, 244, 236, 0.72), rgba(255, 255, 255, 0.88)),
+    var(--soft);
+}
+
+.checkout-card {
+  display: grid;
+  gap: 18px;
+}
+
+.checkout-price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 12px;
+  padding: 18px;
+  background: var(--accent-soft);
+  border: 1px solid rgba(15, 138, 106, 0.18);
+  border-radius: 8px;
+}
+
+.checkout-price span {
+  color: var(--accent-dark);
+  font-size: clamp(38px, 7vw, 58px);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.checkout-price small {
+  color: var(--muted);
+}
+
+.checkout-included ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.checkout-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.embedded-form {
+  margin-top: 22px;
+  box-shadow: none;
+}
+
+.code-block {
+  overflow-x: auto;
+  padding: 16px;
+  color: #f8fbff;
+  background: #17201c;
+  border-radius: 8px;
 }
 
 .timeline article {
