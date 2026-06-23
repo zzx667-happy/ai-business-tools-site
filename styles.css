@@ -1215,6 +1215,24 @@ input[type="range"] {
   border-radius: 7px;
 }
 
+.detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.modal-content ul {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+.modal-content li {
+  color: var(--ink);
+}
+
 .modal-close {
   position: absolute;
   top: 14px;

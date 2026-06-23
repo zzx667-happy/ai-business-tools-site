@@ -199,7 +199,7 @@ const tools = [
     proof: ["Zapier、飞书等工具都支持把表单、表格、邮件和通知串联起来。", "Stripe Payment Links 可以不用写支付后台，直接创建付款链接。"],
     useCase: ["资料包领取后的 3 封跟进邮件", "会员到期提醒", "赞助合作报价流程", "课程或服务的预约确认"],
     steps: ["第 1 封：发送资料包和使用方法。", "第 2 封：给一个真实案例，展示效果。", "第 3 封：提供会员/咨询/赞助入口。", "把点击和回复记录到表格，优先跟进高意向用户。"],
-    monetize: ["模板包 19-49 元。", "帮客户搭自动化流程 499-1999 元。", "配合 Stripe、微信/支付宝收款码或知识付费平台完成收款。"],
+    monetize: ["模板包 19-49 元。", "帮客户搭自动化流程 499-1999 元。", "配合平台支付链接或知识付费平台完成站内跳转购买。"],
     caution: "不要群发骚扰信息；邮件需要退订入口，国内私域也要尊重用户授权。",
     sources: [
       { label: "Zapier AI", url: "https://zapier.com/ai" },
@@ -261,10 +261,38 @@ const infoDetails = {
 };
 
 const modalCopy = {
-  sponsor: { title: "申请赞助位", copy: "留下联系方式，后续可以接入真实报价、排期和付款链接。" },
-  free: { title: "订阅免费更新", copy: "把新工具和教程发给订阅用户，后续转化为会员或咨询客户。" },
-  business: { title: "企业合作咨询", copy: "适合工具测评、专题页、内容合作和私域导流。" },
-  domestic: { title: "国内下单说明", copy: "微信、支付宝和企业微信都能接单。先放收款码，再用表单收需求和交付信息。" },
+  sponsor: {
+    title: "赞助位怎么赚钱",
+    copy: "<p>赞助位是站内直接收入：工具厂商、课程、SaaS 或服务商付费购买展示位置。你可以先按周售卖，等访问量稳定后改成按月报价。</p><ul><li>需要：赞助报价、展示周期、收款链接或合同信息。</li><li>我能做：把赞助内容接到首页、工具页和专题页。</li></ul>",
+  },
+  free: {
+    title: "订阅免费更新",
+    copy: "<p>免费订阅用于沉淀用户，后续把用户转化为资料包、会员、咨询或赞助客户。它本身不直接到账，但能提高复购和成交率。</p>",
+  },
+  business: {
+    title: "企业合作咨询",
+    copy: "<p>适合工具测评、专题页、内容合作和私域导流。用户留下需求后，你可以按项目报价，前期比单靠广告更容易产生现金流。</p>",
+  },
+  incomeSetup: {
+    title: "接入网站收益需要什么",
+    copy: "<p>我已经把站内收益位置做好了。真正到账还差你的实名账号和真实链接。</p><ul><li>广告收益：百度联盟或 AdSense 审核后的广告代码。</li><li>返佣收益：淘宝联盟、京东联盟、AI 工具推荐计划生成的推广链接。</li><li>付费资料：小鹅通、知识星球、微店、淘宝虚拟商品等生成的付款链接。</li><li>赞助位：赞助商素材、价格、展示周期和收款方式。</li></ul><p>你拿到任意一个代码或链接发给我，我就能把对应位置换成真实收益入口。</p>",
+  },
+  adSetup: {
+    title: "广告代码接入",
+    copy: "<p>广告收入必须由广告联盟后台结算。先注册百度联盟或 AdSense，提交网站审核，通过后复制广告代码给我。</p><ul><li>适合位置：首页首屏下方、工具列表侧栏、教程正文中部。</li><li>注意：广告平台通常会看原创内容、网站体验、合规性和账号资质。</li></ul>",
+  },
+  affiliateSetup: {
+    title: "联盟返佣链接接入",
+    copy: "<p>返佣是最适合这个站的第一类网站收入：用户从工具卡片或教程按钮点出去，成交后佣金进你的联盟后台。</p><ul><li>国内可先看淘宝联盟、京东联盟和各类 AI 工具推荐计划。</li><li>你需要给我：产品名称、推广链接、佣金说明、想放在哪些卡片上。</li><li>我能做：把工具详情页按钮替换成你的返佣链接，并标注推荐理由。</li></ul>",
+  },
+  paidSetup: {
+    title: "付费资料链接接入",
+    copy: "<p>资料包、模板、清单最适合做低价数字产品。你在平台创建商品后，把付款链接给我，站内按钮就能直接跳转购买。</p><ul><li>可卖内容：爆款标题库、AI 工具测评表、商单报价话术、30 天更新计划。</li><li>国内常用承接方式：小鹅通、知识星球、微店、淘宝虚拟商品或你自己的支付页。</li></ul>",
+  },
+  leadSetup: {
+    title: "线索表单接入",
+    copy: "<p>线索成交适合高客单服务：建站、自动化、代写、专题页和本地商家获客。用户填表后，你按需求报价。</p><ul><li>需要：表单平台链接或飞书多维表格链接。</li><li>我能做：把当前表单接到真实数据表，并加自动通知。</li></ul>",
+  },
 };
 
 const state = { category: "全部", query: "", saved: new Set(JSON.parse(localStorage.getItem("savedTools") || "[]")) };
@@ -329,9 +357,10 @@ function openModal(type) {
   const modal = document.querySelector("[data-modal]");
   const content = modalCopy[type] || modalCopy.free;
   document.querySelector("[data-modal-title]").textContent = content.title;
-  document.querySelector("[data-modal-copy]").innerHTML = `<p>${content.copy}</p>`;
+  document.querySelector("[data-modal-copy]").innerHTML = content.copy.trim().startsWith("<") ? content.copy : `<p>${content.copy}</p>`;
   modal.hidden = false;
   modal.querySelector("input")?.focus();
+  renderIcons();
 }
 
 function openToolDetail(name) {
@@ -352,8 +381,13 @@ function openToolDetail(name) {
     </div>
     <div class="detail-warning"><strong>注意：</strong>${tool.caution}</div>
     <div class="detail-sources"><strong>参考来源：</strong>${sourceLinks(tool.sources)}</div>
+    <div class="detail-actions">
+      <button class="primary-action" type="button" data-open-modal="affiliateSetup">接入 ${tool.name} 返佣链接</button>
+      <button class="secondary-action" type="button" data-open-modal="paidSetup">做成付费资料入口</button>
+    </div>
   `;
   modal.hidden = false;
+  renderIcons();
 }
 
 
@@ -370,6 +404,7 @@ function openInfoDetail(key) {
     <div class="detail-sources"><strong>参考来源：</strong>${sourceLinks(detail.sources)}</div>
   `;
   modal.hidden = false;
+  renderIcons();
 }
 
 function closeModal() { document.querySelector("[data-modal]").hidden = true; }
