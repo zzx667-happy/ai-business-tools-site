@@ -1027,6 +1027,39 @@ input[type="range"] {
     var(--soft);
 }
 
+.compliance-section {
+  background: #f8fbff;
+}
+
+.compliance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.compliance-card {
+  display: grid;
+  gap: 12px;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(25, 36, 31, 0.06);
+}
+
+.compliance-card svg {
+  color: var(--accent-dark);
+}
+
+.compliance-card h3,
+.compliance-card p {
+  margin: 0;
+}
+
+.compliance-card p {
+  color: var(--muted);
+}
+
 .lead-form {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1081,14 +1114,86 @@ input[type="range"] {
   font-weight: 800;
 }
 
+.consent-line {
+  display: flex !important;
+  grid-template-columns: none !important;
+  align-items: flex-start;
+  gap: 10px !important;
+  font-weight: 600 !important;
+}
+
+.consent-line input {
+  width: 18px;
+  min-height: 18px;
+  margin-top: 3px;
+  accent-color: var(--accent);
+}
+
+.consent-line a,
+.footer-links a {
+  color: var(--accent-dark);
+  font-weight: 800;
+}
+
+.form-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 .footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 18px;
   padding: 24px clamp(20px, 5vw, 72px);
   color: var(--muted);
   background: var(--surface);
   border-top: 1px solid var(--line);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.simple-topbar {
+  position: static;
+}
+
+.legal-page {
+  min-height: calc(100vh - 150px);
+  padding: clamp(42px, 6vw, 82px) clamp(20px, 5vw, 72px);
+  background:
+    linear-gradient(180deg, rgba(223, 244, 236, 0.72), rgba(255, 255, 255, 0.74)),
+    var(--soft);
+}
+
+.legal-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 42px);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.legal-card h1 {
+  margin: 0 0 12px;
+  font-size: clamp(34px, 5vw, 54px);
+  line-height: 1.1;
+}
+
+.legal-card h2 {
+  margin: 26px 0 8px;
+  font-size: 22px;
+}
+
+.legal-card p {
+  margin: 0 0 12px;
+  color: var(--muted);
 }
 
 .modal[hidden] {
@@ -1281,6 +1386,10 @@ input[type="range"] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .compliance-grid {
+    grid-template-columns: 1fr;
+  }
+
   .qr-grid {
     grid-template-columns: 1fr;
   }
@@ -1360,6 +1469,10 @@ input[type="range"] {
 
   .footer {
     flex-direction: column;
+  }
+
+  .simple-topbar .nav {
+    display: flex;
   }
 }
 
