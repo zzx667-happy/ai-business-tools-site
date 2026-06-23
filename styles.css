@@ -411,6 +411,95 @@ img {
   color: var(--accent);
 }
 
+.revenue-section {
+  background:
+    linear-gradient(180deg, rgba(15, 138, 106, 0.05), rgba(255, 255, 255, 0.96)),
+    var(--soft);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 100%;
+  padding: 20px;
+}
+
+.price-head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.price-head span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.price-head strong {
+  color: var(--accent-dark);
+  white-space: nowrap;
+}
+
+.price-card h3 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.price-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.price-card ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.price-card li {
+  color: var(--muted);
+}
+
+.revenue-path {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.revenue-path span {
+  padding: 4px 8px;
+  color: var(--accent-dark);
+  font-size: 12px;
+  font-weight: 800;
+  background: var(--accent-soft);
+  border-radius: 7px;
+}
+
+.revenue-path p {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 700;
+}
+
 .section {
   padding: clamp(58px, 7vw, 96px) clamp(20px, 5vw, 72px);
 }
@@ -1055,7 +1144,8 @@ input[type="range"] {
 @media (max-width: 1120px) {
   .hero,
   .content-grid,
-  .calculator {
+  .calculator,
+  .pricing-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1111,7 +1201,6 @@ input[type="range"] {
 
   .metrics,
   .revenue-strip,
-  .pricing-grid,
   .timeline,
   .quick-grid,
   .kit-grid,
