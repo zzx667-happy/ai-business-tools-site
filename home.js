@@ -53,7 +53,11 @@ const routeData = {
   },
 };
 
-const paymentInfo = "彭言(W2582479036)/收款/001";
+const mainOffer = {
+  name: "智盈导航搭建包",
+  price: "¥499 起",
+  wechat: "w2582479036",
+};
 
 function formatMoney(value) {
   return new Intl.NumberFormat("zh-CN", {
@@ -121,9 +125,10 @@ function buildBrief() {
     `域名：zhiyingnav.com`,
     `联系人：${name}`,
     `联系方式：${contact}`,
+    `主推产品：${mainOffer.name}（${mainOffer.price}）`,
+    `联系微信：${mainOffer.wechat}`,
     `合作方向：${interest}`,
     `预算或报价：${budget}`,
-    `付款信息：${paymentInfo}`,
     `说明：${message}`,
     "",
     "建议下一步：先确认链接、价格、交付方式和商业披露方式。",

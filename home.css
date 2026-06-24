@@ -202,6 +202,19 @@ select {
   margin-top: 26px;
 }
 
+.offer-line {
+  margin: 18px 0 0;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: rgba(9, 18, 22, 0.72);
+  color: var(--muted);
+}
+
+.offer-line strong {
+  color: var(--text);
+}
+
 .hero-stats {
   list-style: none;
   padding: 0;
