@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zzx667-happy.github.io/ai-business-tools-site/sitemap.xml
+Sitemap: https://zhiyingnav.com/sitemap.xml
