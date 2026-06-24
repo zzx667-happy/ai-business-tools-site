@@ -1,62 +1,58 @@
 const routeData = {
-  affiliate: {
-    tag: "返佣清单",
-    title: "围绕“用户准备买什么”写内容。",
-    body:
-      "选品、替代方案、避坑点、价格区间、适合谁，不适合谁。用户进入比较阶段后，返佣会比泛内容更容易转化。",
+  starter: {
+    tag: "9.9 资料包",
+    title: "先卖一份不用思考的小产品。",
+    body: "用户看到 9.9，不需要开会、不需要比较、不需要问朋友，觉得有一点用就会买。这个价格的任务不是赚大钱，而是拿到第一批付款和反馈。",
     items: [
-      "内容类型：对比、榜单、清单、避坑",
-      "收入来源：联盟推广、工具推广、品牌合作",
-      "下一步：先上 10 篇高意图文章",
+      "核心话术：少走弯路，先拿清单",
+      "交付方式：加微信后发送文件或链接",
+      "下一步：付款后引导加购 29 模板包",
     ],
-    sideTitle: "落地动作",
-    sideBody: "先接上联盟链接，再补真实测评和替代推荐，最后做专题页聚合。",
+    sideTitle: "成交重点",
+    sideBody: "页面不要强调“我能帮你赚钱”，要强调“你少花时间、少买错工具、马上能用”。",
   },
-  product: {
-    tag: "资料包",
-    title: "做 9 到 49 元的小额数字产品。",
-    body:
-      "把简历模板、面试题、报价单、脚本库、表格模板拆成清楚的包，先验证是否有人愿意付费。",
+  template: {
+    tag: "29 模板包",
+    title: "给已经付款的人一个更省事的选择。",
+    body: "买过 9.9 的用户如果认可你，就更容易加购模板。这里卖的是能直接复制的沟通、报价、交付和复购话术。",
     items: [
-      "内容类型：模板、清单、表格、脚本",
-      "收入来源：直接购买、会员、加购服务",
-      "下一步：先做 1 个低价包，再做升级版",
+      "适合人群：想尝试接单但不会开口的人",
+      "核心内容：报价表、沟通话术、交付清单",
+      "成交方式：资料包交付后顺手推荐",
     ],
-    sideTitle: "落地动作",
-    sideBody: "把付款页和交付流程先跑通，再考虑做会员或者定制化版本。",
+    sideTitle: "成交重点",
+    sideBody: "不要把 29 放在第一屏硬卖。先让用户拿到 9.9 的价值，再提示“如果你想直接接单，用这个模板包”。",
   },
-  lead: {
-    tag: "线索服务",
-    title: "给本地商家做落地页和表单。",
-    body:
-      "装修、家政、美业、维修、教育这类需求都适合做线索页，项目收费或按月维护都能成立。",
+  diagnosis: {
+    tag: "99 诊断",
+    title: "把服务做轻，不要一上来承诺复杂交付。",
+    body: "99 元适合卖一次方向判断：看用户适合做什么、怎么包装、第一条售卖文案怎么写。时间要控制住，边界要清楚。",
     items: [
-      "内容类型：落地页、表单、通知、回访流程",
-      "收入来源：项目费、月费、维护费",
-      "下一步：先拿 3 个行业样板页",
+      "适合人群：已经想做但不知道从哪下手的人",
+      "交付内容：方向建议、文案修改、3 个选题",
+      "服务边界：不包结果，只给可执行方案",
     ],
-    sideTitle: "落地动作",
-    sideBody: "先卖服务再做内容，现金流会更快。内容反过来给服务导流。",
+    sideTitle: "成交重点",
+    sideBody: "强调“帮你少绕路”，不要承诺收入。这样更真实，也更不容易引发退款和纠纷。",
   },
-  sponsor: {
-    tag: "赞助位",
-    title: "等有稳定访问后再接广告和赞助。",
-    body:
-      "赞助位适合工具、SaaS、课程和本地服务，但必须把商业关系标注清楚，别混成普通推荐。",
+  build: {
+    tag: "499 代搭",
+    title: "499 不放在前面卖，只卖给已经明确要省事的人。",
+    body: "代搭落地页、整理资料包页面、接入联系方式这类服务可以收 499，但它不是冷流量首单产品。先用低价包筛选有需求的人。",
     items: [
-      "内容类型：首页位、专题页位、侧栏位",
-      "收入来源：固定月费、包周、包专题",
-      "下一步：先把访问量和停留时间做起来",
+      "适合人群：已经有产品但不会搭页面的人",
+      "交付内容：单页文案、页面结构、联系入口",
+      "成交方式：从 99 诊断后自然升级",
     ],
-    sideTitle: "落地动作",
-    sideBody: "当网站有了稳定访问，再谈广告和赞助，议价会更好。",
+    sideTitle: "成交重点",
+    sideBody: "499 不是不能卖，是不能一见面就卖。先建立信任，再卖省事服务。",
   },
 };
 
 const mainOffer = {
-  name: "智盈导航起步包",
-  price: "¥199 起",
-  upgrade: "完整版 ¥499",
+  name: "AI 工具避坑包",
+  price: "¥9.9",
+  upgrade: "¥29 模板包 / ¥99 方向诊断 / ¥499 代搭",
   wechat: "w2582479036",
 };
 
@@ -64,7 +60,7 @@ function formatMoney(value) {
   return new Intl.NumberFormat("zh-CN", {
     style: "currency",
     currency: "CNY",
-    maximumFractionDigits: 0,
+    maximumFractionDigits: value % 1 === 0 ? 0 : 1,
   }).format(value);
 }
 
@@ -117,23 +113,23 @@ function buildBrief() {
 
   const name = String(formData.get("name") || "未填写");
   const contact = String(formData.get("contact") || "未填写");
-  const interest = String(formData.get("interest") || "未填写");
+  const interest = String(formData.get("interest") || "9.9 AI 工具避坑包");
   const budget = String(formData.get("budget") || "未填写");
   const message = String(formData.get("message") || "未填写");
 
   return [
-    "合作摘要",
-    `域名：zhiyingnav.com`,
+    "购买信息",
+    "域名：zhiyingnav.com",
     `联系人：${name}`,
     `联系方式：${contact}`,
-    `主推产品：${mainOffer.name}（${mainOffer.price}）`,
-    `升级选项：${mainOffer.upgrade}`,
+    `想买内容：${interest}`,
+    `当前主推：${mainOffer.name}（${mainOffer.price}）`,
+    `可选升级：${mainOffer.upgrade}`,
     `联系微信：${mainOffer.wechat}`,
-    `合作方向：${interest}`,
-    `预算或报价：${budget}`,
+    `备注：${budget}`,
     `说明：${message}`,
     "",
-    "建议下一步：先确认链接、价格、交付方式和商业披露方式。",
+    "购买方式：加微信 w2582479036，发送“9.9”，付款后领取资料包。",
   ].join("\n");
 }
 
@@ -141,11 +137,11 @@ async function copyBrief() {
   const brief = document.getElementById("brief");
   try {
     await navigator.clipboard.writeText(brief.value);
-    setStatus("摘要已复制。");
+    setStatus("信息已复制，可以直接发给微信。");
   } catch {
     brief.focus();
     brief.select();
-    setStatus("请手动复制摘要。");
+    setStatus("请手动复制购买信息。");
   }
 }
 
@@ -172,12 +168,12 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     syncBrief();
-    setStatus("合作摘要已生成，可直接复制发送。");
+    setStatus("购买信息已生成，复制后发给微信即可。");
   });
 
   document.getElementById("copyBrief").addEventListener("click", copyBrief);
 
-  setRoute("affiliate");
+  setRoute("starter");
   updateCalculator();
   syncBrief();
 });
