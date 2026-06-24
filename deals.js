@@ -79,13 +79,15 @@ const affiliate = links.affiliate || {};
 function getTarget(item) {
   const configured = affiliate[item.key];
   if (configured) return { href: configured, label: "查看推荐入口", external: true };
-  const interest = encodeURIComponent(`${item.title}推荐链接`);
-  return { href: `./lead.html?interest=${interest}`, label: "登记需要推荐", external: false };
+  return { href: "#", label: "先登录平台拿链接", external: false, needsLogin: true };
 }
 
 document.querySelector("[data-deal-list]").innerHTML = deals.map((item, index) => {
   const target = getTarget(item);
   const attrs = target.external ? ' target="_blank" rel="noopener sponsored"' : "";
+  const control = target.needsLogin
+    ? `<button class="primary-action full deal-action" type="button" data-open-login-modal data-item="${item.title}"><i data-lucide="shopping-bag"></i>${target.label}</button>`
+    : `<a class="primary-action full" href="${target.href}"${attrs}><i data-lucide="shopping-bag"></i>${target.label}</a>`;
   return `
     <article class="deal-card">
       <div class="deal-card-head">
@@ -99,9 +101,26 @@ document.querySelector("[data-deal-list]").innerHTML = deals.map((item, index) =
       <div class="deal-search"><span>建议搜索</span><strong>${item.search}</strong></div>
       <section><h4>选择标准</h4><ul>${item.choose.map((text) => `<li>${text}</li>`).join("")}</ul></section>
       <div class="detail-warning"><strong>避坑：</strong>${item.avoid}</div>
-      <a class="primary-action full" href="${target.href}"${attrs}><i data-lucide="shopping-bag"></i>${target.label}</a>
+      ${control}
     </article>
   `;
 }).join("");
 
-window.lucide && window.lucide.createIcons();
+function openLoginModal() {
+  const modal = document.querySelector("[data-login-modal]");
+  if (modal) modal.hidden = false;
+}
+
+function closeLoginModal() {
+  const modal = document.querySelector("[data-login-modal]");
+  if (modal) modal.hidden = true;
+}
+
+document.addEventListener("click", (event) => {
+  if (event.target.closest("[data-open-login-modal]")) openLoginModal();
+  if (event.target.closest("[data-close-login-modal]")) closeLoginModal();
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  window.lucide && window.lucide.createIcons();
+});

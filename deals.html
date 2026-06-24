@@ -53,6 +53,7 @@
             <div class="ad-label">商业披露</div>
             <h3>推荐入口说明</h3>
             <p>正式接入联盟链接后，部分按钮可能是推广链接。用户通过链接成交后，本站可能按平台规则获得佣金。</p>
+            <p>当前未配置推广链接时，点击按钮会弹出登录提示，方便你先登录平台再继续拿链接。</p>
             <h3>暂不做这些</h3>
             <ul>
               <li>药品、保健品、医疗器械</li>
@@ -74,5 +75,22 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script src="./monetization.js"></script>
     <script src="./deals.js"></script>
+    <div class="modal" data-login-modal hidden>
+      <div class="modal-backdrop" data-close-login-modal></div>
+      <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="login-modal-title">
+        <button class="icon-button modal-close" type="button" aria-label="关闭" data-close-login-modal><i data-lucide="x"></i></button>
+        <h2 id="login-modal-title">需要先登录联盟平台</h2>
+        <div class="modal-content">
+          <p>这条推荐位还没配置正式推广链接，所以要先登录淘宝联盟或京东联盟拿链接。</p>
+          <ul>
+            <li><a href="https://pub.alimama.com/" target="_blank" rel="noopener">去淘宝联盟登录</a></li>
+            <li><a href="https://union.jd.com/" target="_blank" rel="noopener">去京东联盟登录</a></li>
+            <li><a href="https://jingfen.jd.com/" target="_blank" rel="noopener">打开京粉</a></li>
+            <li><a href="./setup.html">看站内接入清单</a></li>
+          </ul>
+          <p class="form-note">登录完成后，把推广链接填进 <code>monetization.js</code>，这里的按钮就会自动变成正式入口。</p>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
