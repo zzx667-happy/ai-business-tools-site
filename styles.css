@@ -391,6 +391,7 @@ img {
 
 .quick-grid article,
 .guide-list article,
+.guide-list .guide-link,
 .kit-grid article {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -625,6 +626,179 @@ img {
 
 .domestic-section {
   background: #f8fbff;
+}
+
+.deal-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.36fr);
+  gap: clamp(24px, 5vw, 52px);
+  align-items: end;
+  padding: clamp(48px, 7vw, 96px) clamp(20px, 5vw, 72px);
+  color: white;
+  background:
+    linear-gradient(105deg, rgba(9, 28, 23, 0.92), rgba(11, 67, 55, 0.78)),
+    url("./assets/hero-dashboard.png") center / cover no-repeat,
+    #10241d;
+}
+
+.deal-hero h1 {
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1.04;
+}
+
+.deal-hero p {
+  max-width: 760px;
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 18px;
+}
+
+.deal-hero .eyebrow {
+  color: #d9f8ec;
+}
+
+.deal-hero-panel {
+  display: grid;
+  gap: 10px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+  backdrop-filter: blur(14px);
+}
+
+.deal-hero-panel span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.deal-hero-panel strong {
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.deal-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  padding: 0 clamp(20px, 5vw, 72px);
+  background: var(--line);
+}
+
+.deal-strip article {
+  display: grid;
+  gap: 6px;
+  padding: 20px;
+  background: var(--surface);
+}
+
+.deal-strip svg {
+  color: var(--accent);
+}
+
+.deal-strip strong,
+.deal-strip span {
+  display: block;
+}
+
+.deal-strip span {
+  color: var(--muted);
+}
+
+.deal-section {
+  background: #fbfdfb;
+}
+
+.deal-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 22px;
+  align-items: start;
+}
+
+.deal-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.deal-card,
+.deal-sidebar {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(25, 36, 31, 0.06);
+}
+
+.deal-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.deal-card-head svg {
+  color: var(--accent-dark);
+}
+
+.deal-card h3,
+.deal-card p,
+.deal-card h4,
+.deal-card ul,
+.deal-sidebar h3,
+.deal-sidebar p,
+.deal-sidebar ul {
+  margin: 0;
+}
+
+.deal-card h3 {
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.deal-card p,
+.deal-card li,
+.deal-sidebar p,
+.deal-sidebar li {
+  color: var(--muted);
+}
+
+.deal-card ul,
+.deal-sidebar ul {
+  display: grid;
+  gap: 8px;
+  padding-left: 18px;
+}
+
+.deal-search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.deal-search span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.deal-search strong {
+  color: var(--accent-dark);
+}
+
+.deal-sidebar {
+  position: sticky;
+  top: 94px;
 }
 
 .domestic-grid {
@@ -1065,7 +1239,8 @@ input[type="range"] {
   gap: 14px;
 }
 
-.guide-list article {
+.guide-list article,
+.guide-list .guide-link {
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 18px;
@@ -1553,7 +1728,9 @@ input[type="range"] {
   .content-grid,
   .calculator,
   .pricing-grid,
-  .domestic-grid {
+  .domestic-grid,
+  .deal-hero,
+  .deal-layout {
     grid-template-columns: 1fr;
   }
 
@@ -1569,6 +1746,10 @@ input[type="range"] {
     position: static;
   }
 
+  .deal-sidebar {
+    position: static;
+  }
+
   .sponsor-panel img {
     aspect-ratio: 2.8;
   }
@@ -1580,7 +1761,8 @@ input[type="range"] {
   .quick-grid,
   .kit-grid,
   .opportunity-grid,
-  .principles-grid {
+  .principles-grid,
+  .deal-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1625,6 +1807,8 @@ input[type="range"] {
   .opportunity-grid,
   .principles-grid,
   .compliance-grid,
+  .deal-strip,
+  .deal-list,
   .lead-form {
     grid-template-columns: 1fr;
   }
@@ -1634,6 +1818,7 @@ input[type="range"] {
   }
 
   .guide-list article,
+  .guide-list .guide-link,
   .hero-board article {
     grid-template-columns: 1fr;
   }
