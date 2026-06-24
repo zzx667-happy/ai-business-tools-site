@@ -54,8 +54,9 @@ const routeData = {
 };
 
 const mainOffer = {
-  name: "智盈导航搭建包",
-  price: "¥499 起",
+  name: "智盈导航起步包",
+  price: "¥199 起",
+  upgrade: "完整版 ¥499",
   wechat: "w2582479036",
 };
 
@@ -126,6 +127,7 @@ function buildBrief() {
     `联系人：${name}`,
     `联系方式：${contact}`,
     `主推产品：${mainOffer.name}（${mainOffer.price}）`,
+    `升级选项：${mainOffer.upgrade}`,
     `联系微信：${mainOffer.wechat}`,
     `合作方向：${interest}`,
     `预算或报价：${budget}`,
