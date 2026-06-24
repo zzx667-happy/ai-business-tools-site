@@ -1,72 +1,53 @@
 const routeData = {
-  starter: {
-    tag: "9.9 资料包",
-    title: "先卖一份不用思考的小产品。",
-    body: "用户看到 9.9，不需要开会、不需要比较、不需要问朋友，觉得有一点用就会买。这个价格的任务不是赚大钱，而是拿到第一批付款和反馈。",
+  tools: {
+    tag: "选工具",
+    title: "先知道哪些工具值得试，哪些可以暂时不用。",
+    body: "资料包会按使用场景列出工具，帮你快速判断自己现在该用哪一类。",
     items: [
-      "核心话术：少走弯路，先拿清单",
-      "交付方式：加微信后发送文件或链接",
-      "下一步：付款后引导加购 29 模板包",
+      "适合 AI 新手",
+      "适合想节省试错时间的人",
+      "适合不想乱开会员的人",
     ],
-    sideTitle: "成交重点",
-    sideBody: "页面不要强调“我能帮你赚钱”，要强调“你少花时间、少买错工具、马上能用”。",
+    sideTitle: "你能得到",
+    sideBody: "一份更清楚的工具选择顺序，避免一上来就收藏一堆用不上的链接。",
   },
-  template: {
-    tag: "29 模板包",
-    title: "给已经付款的人一个更省事的选择。",
-    body: "买过 9.9 的用户如果认可你，就更容易加购模板。这里卖的是能直接复制的沟通、报价、交付和复购话术。",
+  writing: {
+    tag: "写内容",
+    title: "用提示词更快写出初稿，再按自己的风格修改。",
+    body: "资料包包含常用写作提示词，适合写朋友圈、小红书文案、产品介绍、短视频脚本和学习笔记。",
     items: [
-      "适合人群：想尝试接单但不会开口的人",
-      "核心内容：报价表、沟通话术、交付清单",
-      "成交方式：资料包交付后顺手推荐",
+      "内容初稿提示词",
+      "标题和卖点提示词",
+      "改写和润色提示词",
     ],
-    sideTitle: "成交重点",
-    sideBody: "不要把 29 放在第一屏硬卖。先让用户拿到 9.9 的价值，再提示“如果你想直接接单，用这个模板包”。",
+    sideTitle: "你能得到",
+    sideBody: "不是让 AI 替你思考，而是先帮你把空白页面填起来，再自己判断和修改。",
   },
-  diagnosis: {
-    tag: "99 诊断",
-    title: "把服务做轻，不要一上来承诺复杂交付。",
-    body: "99 元适合卖一次方向判断：看用户适合做什么、怎么包装、第一条售卖文案怎么写。时间要控制住，边界要清楚。",
+  office: {
+    tag: "做办公",
+    title: "把 AI 用在表格、PPT、总结和日常办公上。",
+    body: "适合需要处理文字、会议纪要、表格思路、PPT 大纲和邮件回复的人。",
     items: [
-      "适合人群：已经想做但不知道从哪下手的人",
-      "交付内容：方向建议、文案修改、3 个选题",
-      "服务边界：不包结果，只给可执行方案",
+      "办公工具推荐",
+      "总结和提炼提示词",
+      "表格处理思路",
     ],
-    sideTitle: "成交重点",
-    sideBody: "强调“帮你少绕路”，不要承诺收入。这样更真实，也更不容易引发退款和纠纷。",
+    sideTitle: "你能得到",
+    sideBody: "更快找到适合办公场景的工具，不用把时间浪费在无效尝试上。",
   },
-  build: {
-    tag: "499 代搭",
-    title: "499 不放在前面卖，只卖给已经明确要省事的人。",
-    body: "代搭落地页、整理资料包页面、接入联系方式这类服务可以收 499，但它不是冷流量首单产品。先用低价包筛选有需求的人。",
+  freelance: {
+    tag: "接单准备",
+    title: "先把介绍、报价和交付流程准备清楚。",
+    body: "如果你想尝试用 AI 辅助接单，资料包里会提供基础话术和检查清单，方便你先搭起框架。",
     items: [
-      "适合人群：已经有产品但不会搭页面的人",
-      "交付内容：单页文案、页面结构、联系入口",
-      "成交方式：从 99 诊断后自然升级",
+      "服务介绍模板",
+      "报价说明参考",
+      "交付检查清单",
     ],
-    sideTitle: "成交重点",
-    sideBody: "499 不是不能卖，是不能一见面就卖。先建立信任，再卖省事服务。",
+    sideTitle: "你能得到",
+    sideBody: "先把沟通和交付讲清楚，减少客户反复追问，也减少自己临时整理的压力。",
   },
 };
-
-const mainOffer = {
-  name: "AI 工具避坑包",
-  price: "¥9.9",
-  upgrade: "¥29 模板包 / ¥99 方向诊断 / ¥499 代搭",
-  wechat: "w2582479036",
-};
-
-function formatMoney(value) {
-  return new Intl.NumberFormat("zh-CN", {
-    style: "currency",
-    currency: "CNY",
-    maximumFractionDigits: value % 1 === 0 ? 0 : 1,
-  }).format(value);
-}
-
-function formatNumber(value) {
-  return new Intl.NumberFormat("zh-CN").format(value);
-}
 
 function setRoute(route) {
   const data = routeData[route];
@@ -91,67 +72,18 @@ function setRoute(route) {
   `;
 }
 
-function updateCalculator() {
-  const visits = Number(document.getElementById("visits").value);
-  const conversion = Number(document.getElementById("conversion").value);
-  const order = Number(document.getElementById("order").value);
-  const sponsor = Number(document.getElementById("sponsor").value);
-
-  const paidRevenue = visits * (conversion / 100) * order;
-  const total = paidRevenue + sponsor;
-
-  document.querySelector("[data-visits-value]").textContent = formatNumber(visits);
-  document.querySelector("[data-conversion-value]").textContent = `${conversion.toFixed(1)}%`;
-  document.querySelector("[data-order-value]").textContent = formatMoney(order);
-  document.querySelector("[data-sponsor-value]").textContent = formatMoney(sponsor);
-  document.querySelector("[data-revenue]").textContent = formatMoney(total);
-}
-
-function buildBrief() {
-  const form = document.getElementById("coopForm");
-  const formData = new FormData(form);
-
-  const name = String(formData.get("name") || "未填写");
-  const contact = String(formData.get("contact") || "未填写");
-  const interest = String(formData.get("interest") || "9.9 AI 工具避坑包");
-  const budget = String(formData.get("budget") || "未填写");
-  const message = String(formData.get("message") || "未填写");
-
-  return [
-    "购买信息",
-    "域名：zhiyingnav.com",
-    `联系人：${name}`,
-    `联系方式：${contact}`,
-    `想买内容：${interest}`,
-    `当前主推：${mainOffer.name}（${mainOffer.price}）`,
-    `可选升级：${mainOffer.upgrade}`,
-    `联系微信：${mainOffer.wechat}`,
-    `备注：${budget}`,
-    `说明：${message}`,
-    "",
-    "购买方式：加微信 w2582479036，发送“9.9”，付款后领取资料包。",
-  ].join("\n");
-}
-
-async function copyBrief() {
-  const brief = document.getElementById("brief");
+async function copyText(text, successMessage) {
   try {
-    await navigator.clipboard.writeText(brief.value);
-    setStatus("信息已复制，可以直接发给微信。");
+    await navigator.clipboard.writeText(text);
+    setStatus(successMessage);
   } catch {
-    brief.focus();
-    brief.select();
-    setStatus("请手动复制购买信息。");
+    setStatus("复制失败，请手动复制。");
   }
 }
 
 function setStatus(message) {
-  document.getElementById("formStatus").textContent = message;
-}
-
-function syncBrief() {
-  const brief = document.getElementById("brief");
-  brief.value = buildBrief();
+  const status = document.getElementById("formStatus");
+  if (status) status.textContent = message;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -159,21 +91,15 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => setRoute(button.dataset.route));
   });
 
-  ["visits", "conversion", "order", "sponsor"].forEach((id) => {
-    document.getElementById(id).addEventListener("input", updateCalculator);
+  document.getElementById("copyWechat")?.addEventListener("click", () => {
+    const value = document.getElementById("wechatId").value;
+    copyText(value, "微信号已复制。");
   });
 
-  const form = document.getElementById("coopForm");
-  form.addEventListener("input", syncBrief);
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    syncBrief();
-    setStatus("购买信息已生成，复制后发给微信即可。");
+  document.getElementById("copyMessage")?.addEventListener("click", () => {
+    const value = document.getElementById("buyMessage").value;
+    copyText(value, "购买话术已复制。");
   });
 
-  document.getElementById("copyBrief").addEventListener("click", copyBrief);
-
-  setRoute("starter");
-  updateCalculator();
-  syncBrief();
+  setRoute("tools");
 });
