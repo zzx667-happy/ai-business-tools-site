@@ -1,33 +1,16 @@
 window.ZHIYING_LINKS = {
-  owner: {
-    publicName: "智盈精选",
-    email: "",
-    wechat: "",
+  product: {
+    name: "AI 工具避坑包",
+    price: "¥9.9",
+    summary: "常用工具、免费替代、提示词模板和新手避坑说明。",
   },
-  affiliate: {
-    taobaoOfficial: "https://pub.alimama.com/",
-    jdOfficial: "https://union.jd.com/",
-    officeDesk: "",
-    homeEssentials: "",
-    careerTools: "",
-    aiTools: "",
-    monitorStand: "",
-    wirelessMouse: "",
-    mechanicalKeyboard: "",
-    usbCHub: "",
-    laptopStand: "",
-    labelPrinter: "",
-    microphone: "",
-    fillLight: "",
+  contact: {
+    wechat: "w2582479036",
   },
   payments: {
-    savingKit: "",
-    careerKit: "",
-    businessKit: "",
-    contentKit: "",
+    aiKit: "",
   },
-  lead: {
-    formUrl: "",
-    fallbackUrl: "./lead.html",
+  delivery: {
+    receiptUrl: "./lead.html",
   },
 };

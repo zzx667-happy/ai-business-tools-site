@@ -3,33 +3,72 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>资料包购买 | 智盈精选</title>
-    <meta name="description" content="智盈精选资料包购买页，支持省钱采购表、简历面试包、商家获客表和标题脚本库。" />
+    <title>购买 AI 工具避坑包 | 智盈导航</title>
+    <meta name="description" content="AI 工具避坑包购买页，完成付款后进入领取页查看完整资料。" />
     <link rel="canonical" href="https://zhiyingnav.com/checkout.html" />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="topbar simple-topbar">
-      <a class="brand" href="./index.html" aria-label="返回智盈精选首页"><span class="brand-mark">盈</span><span><strong>智盈精选</strong><small>资料包购买</small></span></a>
-      <nav class="nav" aria-label="资料包导航"><a href="./index.html#kits">资料包</a><a href="./privacy.html">隐私政策</a><a href="./disclaimer.html">免责声明</a></nav>
+      <a class="brand" href="./index.html" aria-label="返回首页">
+        <span class="brand-mark">智</span>
+        <span><strong>智盈导航</strong><small>AI 工具避坑包</small></span>
+      </a>
+      <nav class="nav" aria-label="购买页导航">
+        <a href="./index.html#contents">资料内容</a>
+        <a href="./index.html#faq">常见问题</a>
+      </nav>
     </header>
+
     <main class="legal-page checkout-page">
       <article class="legal-card checkout-card">
         <p class="eyebrow">数字资料</p>
-        <h1 data-kit-title>资料包</h1>
-        <p class="detail-summary" data-kit-summary>正在读取资料包信息。</p>
-        <div class="checkout-price"><span data-kit-price>¥0</span><small>一次购买，按付款平台规则交付</small></div>
-        <div class="checkout-included" data-kit-included></div>
-        <div class="detail-warning"><strong>说明：</strong>本站不直接处理付款。按钮会跳转到你配置的正规付款平台；未配置付款链接时，页面会引导用户提交需求。</div>
+        <h1>AI 工具避坑包</h1>
+        <p class="detail-summary">先把常用工具、免费替代、提示词模板和新手避坑说明整理到一份。</p>
+        <div class="checkout-price">
+          <span>¥9.9</span>
+          <small>付款后进入领取页查看完整内容</small>
+        </div>
+        <div class="checkout-included">
+          <h2>包含内容</h2>
+          <ul>
+            <li>AI 工具清单</li>
+            <li>免费替代方案</li>
+            <li>提示词模板</li>
+            <li>新手避坑说明</li>
+          </ul>
+        </div>
+        <div class="detail-warning">
+          <strong>付款说明：</strong>完成付款后，点击领取页即可查看资料内容。
+        </div>
         <div class="checkout-actions">
-          <a class="primary-action" href="./lead.html" data-buy-link><i data-lucide="shopping-bag"></i>获取资料包</a>
-          <a class="secondary-action" href="./lead.html"><i data-lucide="message-square"></i>提交需求</a>
+          <a class="primary-action" href="#" data-buy-link><i data-lucide="shopping-bag"></i>去付款</a>
+          <a class="secondary-action" href="./lead.html"><i data-lucide="download"></i>打开领取页</a>
         </div>
       </article>
     </main>
+
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script src="./monetization.js"></script>
-    <script src="./checkout.js"></script>
+    <script>
+      const links = window.ZHIYING_LINKS || {};
+      const buyLink = document.querySelector("[data-buy-link]");
+      const paymentUrl = links.payments?.aiKit || "";
+
+      if (paymentUrl) {
+        buyLink.href = paymentUrl;
+        buyLink.target = "_blank";
+        buyLink.rel = "noopener";
+      } else {
+        buyLink.href = "#";
+        buyLink.setAttribute("aria-disabled", "true");
+        buyLink.setAttribute("tabindex", "-1");
+        buyLink.addEventListener("click", (event) => event.preventDefault());
+        buyLink.textContent = "付款入口暂未开通";
+      }
+
+      window.lucide && window.lucide.createIcons();
+    </script>
   </body>
 </html>
