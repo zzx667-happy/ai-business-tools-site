@@ -53,6 +53,8 @@ const routeData = {
   },
 };
 
+const paymentInfo = "彭言(W2582479036)/收款/001";
+
 function formatMoney(value) {
   return new Intl.NumberFormat("zh-CN", {
     style: "currency",
@@ -121,6 +123,7 @@ function buildBrief() {
     `联系方式：${contact}`,
     `合作方向：${interest}`,
     `预算或报价：${budget}`,
+    `付款信息：${paymentInfo}`,
     `说明：${message}`,
     "",
     "建议下一步：先确认链接、价格、交付方式和商业披露方式。",

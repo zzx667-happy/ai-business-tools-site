@@ -517,6 +517,24 @@ input[type="range"] {
   gap: 12px;
 }
 
+.payment-box {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(9, 18, 22, 0.92);
+}
+
+.payment-box strong,
+.payment-box p {
+  margin: 0;
+}
+
+.payment-box p {
+  color: var(--muted);
+}
+
 #brief {
   width: 100%;
   min-height: 310px;
