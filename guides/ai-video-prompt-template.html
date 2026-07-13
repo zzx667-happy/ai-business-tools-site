@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI 视频提示词公式与中文模板 | 智影导航</title>
+    <meta
+      name="description"
+      content="可直接套用的 AI 视频中文提示词公式和模板，覆盖文生视频、图生视频、产品展示、人物镜头、动漫画面和分镜脚本。"
+    />
+    <meta name="theme-color" content="#fbfbf7" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="AI 视频提示词公式与中文模板" />
+    <meta property="og:description" content="主体、动作、镜头、场景、光线、风格：六个部分写清楚，生成更可控。" />
+    <meta property="og:image" content="https://zhiyingnav.com/assets/site-preview.png" />
+    <link rel="canonical" href="https://zhiyingnav.com/guides/ai-video-prompt-template.html" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../home.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "AI 视频提示词公式与中文模板",
+        "datePublished": "2026-07-13",
+        "dateModified": "2026-07-13",
+        "author": { "@type": "Organization", "name": "智影导航" },
+        "publisher": { "@type": "Organization", "name": "智影导航" },
+        "mainEntityOfPage": "https://zhiyingnav.com/guides/ai-video-prompt-template.html"
+      }
+    </script>
+  </head>
+  <body class="article-body">
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="返回智影导航首页">
+        <span class="brand-mark">智</span>
+        <span class="brand-copy">
+          <strong>智影导航</strong>
+          <small>AI 视频创作指南</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="../index.html#tools">工具</a>
+        <a href="../index.html#guides">教程</a>
+        <a href="./ai-video-workflow.html">完整流程</a>
+      </nav>
+      <a class="header-action" href="../index.html#contact">创作咨询</a>
+    </header>
+
+    <main>
+      <header class="article-hero">
+        <div class="article-hero-inner">
+          <nav class="breadcrumbs" aria-label="面包屑">
+            <a href="../index.html">首页</a>
+            <span>/</span>
+            <span>提示词模板</span>
+          </nav>
+          <p class="eyebrow">Prompt Templates</p>
+          <h1>AI 视频提示词公式与中文模板</h1>
+          <p class="article-lead">
+            提示词不是越长越好。先写清主体和动作，再补镜头、场景、光线与风格；每个镜头只安排一个主要动作，结果通常更容易控制。
+          </p>
+          <div class="article-meta">
+            <span>更新：2026 年 7 月 13 日</span>
+            <span>阅读约 6 分钟</span>
+            <span>模板可自由改写使用</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="article-layout">
+        <article class="article-main">
+          <h2 id="formula">通用六段公式</h2>
+          <div class="takeaway">
+            <strong>主体 + 动作 + 镜头 + 场景 + 光线 + 风格</strong>
+            <p>先写前两项确保模型知道“谁在做什么”，再用后四项控制画面怎么呈现。</p>
+          </div>
+          <div class="comparison-wrap">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>部分</th>
+                  <th>要回答的问题</th>
+                  <th>示例词</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>主体</td>
+                  <td>画面里最重要的人或物是谁？</td>
+                  <td>穿灰色风衣的年轻女性、白色咖啡机</td>
+                </tr>
+                <tr>
+                  <td>动作</td>
+                  <td>主体只做哪一个主要动作？</td>
+                  <td>缓慢回头、杯中咖啡逐渐注满</td>
+                </tr>
+                <tr>
+                  <td>镜头</td>
+                  <td>景别和摄影机如何运动？</td>
+                  <td>中景推进到近景、低机位跟拍</td>
+                </tr>
+                <tr>
+                  <td>场景</td>
+                  <td>时间、地点和环境变化是什么？</td>
+                  <td>雨后街口、清晨厨房、背景行人经过</td>
+                </tr>
+                <tr>
+                  <td>光线</td>
+                  <td>画面明暗、方向和色温如何？</td>
+                  <td>窗边柔光、暖色逆光、阴天漫射光</td>
+                </tr>
+                <tr>
+                  <td>风格</td>
+                  <td>整体质感与节奏是什么？</td>
+                  <td>真实电影感、二维动画、克制的广告质感</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="text-video">模板 1：文生视频</h2>
+          <p>没有参考图时，需要同时写清人物外观和场景，但仍然不要堆太多动作。</p>
+          <div class="template-block">
+            <strong>通用模板</strong>
+            <p>【主体外观】在【场景】中【主要动作】；镜头采用【景别】，从【起始位置】平稳【镜头运动】到【结束位置】；【环境变化】，使用【光线】，整体为【风格】，动作自然连续，画面稳定。</p>
+          </div>
+          <div class="template-block">
+            <strong>完整示例</strong>
+            <p>一位穿浅灰风衣、短发的年轻女性站在雨后的城市路口，缓慢抬头看向远处；镜头采用中景，从人物右后方平稳推进到侧脸近景；路面倒影轻微晃动，背景行人自然经过，阴天柔和漫射光，真实电影感，节奏克制，动作连续。</p>
+          </div>
+
+          <h2 id="image-video">模板 2：图生视频</h2>
+          <p>参考图已经定义外观与构图，提示词重点写动作和镜头。重复描述外貌过多，反而可能让主体发生变化。</p>
+          <div class="template-block">
+            <strong>通用模板</strong>
+            <p>主体【主要动作】；镜头【运动方式】，从【景别】变化为【景别】；【头发、衣物、液体、树叶等次要运动】自然响应；保持主体外观和构图稳定，无突然切镜，无明显形变。</p>
+          </div>
+          <div class="template-block">
+            <strong>人物示例</strong>
+            <p>人物先保持静止，随后缓慢转头看向镜头并轻微微笑；镜头从中景缓慢推进到近景，头发被微风轻轻吹动；保持面部、服装和背景结构稳定，动作自然连续。</p>
+          </div>
+
+          <h2 id="product">模板 3：产品展示</h2>
+          <p>产品视频最重要的是形状、材质和标识稳定。尽量上传真实产品图，并在后期叠加准确文字。</p>
+          <div class="template-block">
+            <strong>产品转台镜头</strong>
+            <p>保持【产品】外形、颜色、材质和结构不变；产品在干净背景中缓慢旋转约 30 度，镜头轻微环绕并推进，表面高光自然移动，【冷/暖】色棚拍光，简洁克制的商业广告质感，无额外零件，无文字变化。</p>
+          </div>
+          <div class="template-block">
+            <strong>使用场景镜头</strong>
+            <p>一只手自然拿起【产品】并完成【一个使用动作】，镜头固定在近景，焦点始终落在产品主体；背景轻微虚化，窗边柔光，真实生活方式广告质感，产品结构和标识保持稳定。</p>
+          </div>
+
+          <h2 id="animation">模板 4：动漫与插画</h2>
+          <div class="template-block">
+            <strong>二维角色镜头</strong>
+            <p>保持角色五官、发型、服装配色和线条风格一致；角色【一个主要动作】，镜头【固定/平移/推进】，背景中的【云、树叶、灯光】缓慢变化；二维手绘动画，线条干净，色块稳定，动作流畅，不增加新人物。</p>
+          </div>
+
+          <h2 id="camera">常用镜头词怎么选</h2>
+          <ul>
+            <li><strong>固定镜头：</strong>产品展示、对话、动作本身已经复杂时优先使用。</li>
+            <li><strong>缓慢推进：</strong>强调人物表情、产品细节或制造关注感。</li>
+            <li><strong>拉远：</strong>从主体逐渐展示环境，适合结尾或场景揭示。</li>
+            <li><strong>横向跟拍：</strong>人物走路、车辆移动等方向明确的动作。</li>
+            <li><strong>环绕镜头：</strong>展示立体产品或角色造型，但主体容易变形时应减小幅度。</li>
+            <li><strong>低机位仰拍：</strong>增强力量和体量感；高机位俯拍则更适合展示空间关系。</li>
+          </ul>
+
+          <h2 id="repair">生成不对时怎么改</h2>
+          <div class="comparison-wrap">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>问题</th>
+                  <th>优先修改</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>人物或产品变形</td>
+                  <td>减少动作和环绕幅度，改用清晰参考图，强调保持主体结构。</td>
+                </tr>
+                <tr>
+                  <td>镜头不听指令</td>
+                  <td>只保留一种运镜，明确起点、终点与景别变化。</td>
+                </tr>
+                <tr>
+                  <td>画面像静态图片</td>
+                  <td>补充主体动作和环境中的次要运动，而不是只写“电影感”。</td>
+                </tr>
+                <tr>
+                  <td>动作突然或过快</td>
+                  <td>加入“缓慢、连续、克制、无突然切镜”，并减少同镜头动作数量。</td>
+                </tr>
+                <tr>
+                  <td>风格前后不一致</td>
+                  <td>固定参考图、光线和风格词顺序，不要每个镜头更换整套描述。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="script-prompt">附加模板：让 AI 帮你拆分镜</h2>
+          <div class="template-block">
+            <strong>分镜生成提示词</strong>
+            <p>请把【主题】拆成一条【30/60】秒、【9:16/16:9】的视频分镜。目标观众是【人群】，整体风格是【风格】。最多 5 个镜头，每个镜头只安排一个主要动作。用表格输出：镜头编号、时长、画面主体、动作、景别与运镜、旁白、视频生成提示词。</p>
+          </div>
+
+          <div class="source-note">
+            <strong>方法依据</strong>
+            <p>
+              Vidu 官方提示词页面也采用“主体、动作、镜头、场景、风格”的结构；本文在此基础上增加光线与稳定性检查，方便中文短视频工作流。查看
+              <a href="https://www.vidu.com/zh/ai-text-to-video" target="_blank" rel="noreferrer">Vidu 官方文生视频说明</a>。
+            </p>
+          </div>
+
+          <section class="article-cta" aria-label="咨询入口">
+            <div>
+              <h2>需要按你的素材改提示词？</h2>
+              <p>发来参考图和目标效果，加微信时备注“智影导航”。</p>
+            </div>
+            <strong>w2582479036</strong>
+          </section>
+        </article>
+
+        <aside class="article-aside">
+          <strong>本文目录</strong>
+          <nav aria-label="文章目录">
+            <a href="#formula">通用六段公式</a>
+            <a href="#text-video">文生视频模板</a>
+            <a href="#image-video">图生视频模板</a>
+            <a href="#product">产品展示模板</a>
+            <a href="#animation">动漫插画模板</a>
+            <a href="#camera">常用镜头词</a>
+            <a href="#repair">问题修正</a>
+            <a href="#script-prompt">分镜提示词</a>
+          </nav>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p>© 2026 智影导航 · zhiyingnav.com</p>
+        <p>模板可自由改写使用，生成内容请自行检查版权与合规风险。</p>
+      </div>
+      <nav aria-label="页脚导航">
+        <a href="./kling-vs-jimeng.html">上一篇</a>
+        <a href="../index.html">返回首页</a>
+      </nav>
+    </footer>
+  </body>
+</html>

@@ -3,21 +3,32 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>智影导航 | AI 视频、图像、写作与效率工具入口</title>
+    <title>智影导航 | AI 视频创作工具、教程与提示词</title>
     <meta
       name="description"
-      content="智影导航整理 AI 视频、AI 绘画、写作搜索、办公设计和编程工具入口，按使用场景快速找到适合的官方工具。"
+      content="智影导航专注 AI 视频与短视频创作，整理可灵、即梦、Runway、海螺、Vidu、剪映等官方入口，并提供工具对比、成片流程和提示词模板。"
     />
     <meta name="theme-color" content="#fbfbf7" />
-    <meta property="og:title" content="智影导航 | AI 工具入口" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="智影导航" />
+    <meta property="og:title" content="智影导航 | AI 视频创作工具与实战指南" />
     <meta
       property="og:description"
-      content="按场景查找 AI 视频、图像、写作、搜索、办公和编程工具。"
+      content="从选工具、写提示词到剪辑成片，给中文创作者一条清楚的 AI 视频工作流。"
     />
     <meta property="og:image" content="https://zhiyingnav.com/assets/site-preview.png" />
     <link rel="canonical" href="https://zhiyingnav.com/" />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./home.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "智影导航",
+        "url": "https://zhiyingnav.com/",
+        "description": "面向中文创作者的 AI 视频工具、教程与提示词站点"
+      }
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -25,297 +36,246 @@
         <span class="brand-mark">智</span>
         <span class="brand-copy">
           <strong>智影导航</strong>
-          <small>zhiyingnav.com</small>
+          <small>AI 视频创作指南</small>
         </span>
       </a>
       <nav class="nav-links" aria-label="主导航">
         <a href="#tools">工具</a>
-        <a href="#routes">路线</a>
-        <a href="#prompts">提示词</a>
-        <a href="#submit">提交</a>
+        <a href="#guides">教程</a>
+        <a href="#workflow">流程</a>
+        <a href="#contact">咨询</a>
       </nav>
-      <a class="header-action" href="#tools">查工具</a>
+      <a class="header-action" href="./guides/ai-video-prompt-template.html">提示词模板</a>
     </header>
 
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">AI video · image · writing · productivity</p>
-          <h1>智影导航</h1>
+          <p class="eyebrow">智影导航 · 专注 AI 视频与短视频</p>
+          <h1>AI 视频创作工具与实战指南</h1>
           <p class="hero-text">
-            把常用 AI 视频、图像、写作搜索、办公设计和编程工具整理成一个入口。先按场景找官方入口，再决定要不要注册、试用或付费。
+            不再堆一大串 AI 名称。这里按“写脚本、生成画面、剪辑成片”整理工具，并给出可以直接照着做的中文流程与提示词。
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#tools">开始查找</a>
-            <a class="button secondary" href="#routes">看使用路线</a>
+            <a class="button primary" href="#tools">按用途选工具</a>
+            <a class="button secondary" href="./guides/ai-video-workflow.html">看完整成片流程</a>
           </div>
           <dl class="quick-stats" aria-label="站点内容概览">
             <div>
-              <dt>6 类</dt>
-              <dd>高频场景</dd>
+              <dt>9 个</dt>
+              <dd>精选创作工具</dd>
             </div>
             <div>
-              <dt>18 个</dt>
-              <dd>官方入口</dd>
+              <dt>3 篇</dt>
+              <dd>原创实用指南</dd>
             </div>
             <div>
-              <dt>0 门槛</dt>
-              <dd>按需求筛选</dd>
+              <dt>1 条</dt>
+              <dd>从想法到成片</dd>
             </div>
           </dl>
         </div>
 
-        <div class="hero-visual" aria-label="智影导航预览">
-          <img src="./assets/site-preview.png" alt="智影导航工具搜索界面预览" />
+        <div class="hero-visual" aria-label="智影导航工具工作台预览">
+          <img src="./assets/site-preview.png" alt="智影导航 AI 视频工具工作台预览" />
         </div>
       </section>
 
       <section class="finder" id="tools" aria-labelledby="tools-title">
         <div class="section-heading">
-          <p class="eyebrow">Tool Finder</p>
-          <h2 id="tools-title">按场景找 AI 工具</h2>
-          <p>入口优先指向官方站点。价格、额度、地区可用性和具体功能以各工具官方页面为准。</p>
+          <p class="eyebrow">Video Tool Finder</p>
+          <h2 id="tools-title">先看你要做哪一步</h2>
+          <p>每个入口都指向官方站点。免费额度、模型版本和地区可用性变化较快，请以官方页面为准。</p>
         </div>
 
         <div class="filter-panel" role="search">
           <label class="search-box">
             <span>搜索工具或用途</span>
-            <input id="toolSearch" type="search" placeholder="例如：视频、海报、PPT、论文、编程、搜索" />
+            <input id="toolSearch" type="search" placeholder="例如：图生视频、人物一致、剪辑、脚本、动漫" />
           </label>
           <div class="chips" aria-label="工具分类筛选">
             <button class="chip active" data-filter="all" type="button">全部</button>
-            <button class="chip" data-filter="chat" type="button">对话搜索</button>
-            <button class="chip" data-filter="image" type="button">图像设计</button>
-            <button class="chip" data-filter="video" type="button">视频影像</button>
-            <button class="chip" data-filter="office" type="button">办公内容</button>
-            <button class="chip" data-filter="code" type="button">编程</button>
+            <button class="chip" data-filter="generate" type="button">生成视频</button>
+            <button class="chip" data-filter="edit" type="button">剪辑成片</button>
+            <button class="chip" data-filter="script" type="button">脚本策划</button>
+            <button class="chip" data-filter="china" type="button">中文友好</button>
           </div>
         </div>
 
         <div class="tool-grid" id="toolGrid">
-          <article class="tool-card" data-category="chat office" data-keywords="通用 对话 写作 总结 学习 办公">
+          <article class="tool-card" data-category="generate china" data-keywords="可灵 Kling 文生视频 图生视频 首尾帧 多镜头 人物一致">
             <div class="tool-head">
-              <span class="tool-badge">综合</span>
-              <h3>ChatGPT</h3>
-            </div>
-            <p>适合头脑风暴、写作、总结、图片理解、资料整理和日常问答。</p>
-            <a href="https://chatgpt.com/" target="_blank" rel="noreferrer">打开官方入口</a>
-          </article>
-
-          <article class="tool-card" data-category="chat office" data-keywords="Claude 长文 写作 分析 文档">
-            <div class="tool-head">
-              <span class="tool-badge">长文</span>
-              <h3>Claude</h3>
-            </div>
-            <p>适合长文阅读、写作润色、方案分析和复杂文档处理。</p>
-            <a href="https://claude.ai/" target="_blank" rel="noreferrer">打开官方入口</a>
-          </article>
-
-          <article class="tool-card" data-category="chat office" data-keywords="Gemini 谷歌 多模态 搜索 学习">
-            <div class="tool-head">
-              <span class="tool-badge">多模态</span>
-              <h3>Gemini</h3>
-            </div>
-            <p>适合搜索辅助、图文理解、资料解释和 Google 生态任务。</p>
-            <a href="https://gemini.google.com/" target="_blank" rel="noreferrer">打开官方入口</a>
-          </article>
-
-          <article class="tool-card" data-category="chat office" data-keywords="Kimi 长文 中文 文档 论文 报告">
-            <div class="tool-head">
-              <span class="tool-badge">中文长文</span>
-              <h3>Kimi</h3>
-            </div>
-            <p>适合中文长文档阅读、材料整理、论文报告初筛和摘要。</p>
-            <a href="https://www.kimi.com/" target="_blank" rel="noreferrer">打开官方入口</a>
-          </article>
-
-          <article class="tool-card" data-category="chat office" data-keywords="豆包 中文 图片 视频 日常 问答">
-            <div class="tool-head">
-              <span class="tool-badge">日常</span>
-              <h3>豆包</h3>
-            </div>
-            <p>适合中文问答、写作改写、学习解释和轻量创作。</p>
-            <a href="https://www.doubao.com/" target="_blank" rel="noreferrer">打开官方入口</a>
-          </article>
-
-          <article class="tool-card" data-category="chat office" data-keywords="通义 千问 中文 搜索 文档 图片">
-            <div class="tool-head">
-              <span class="tool-badge">中文综合</span>
-              <h3>通义千问</h3>
-            </div>
-            <p>适合中文写作、资料总结、图片理解和办公任务拆解。</p>
-            <a href="https://www.qianwen.com/" target="_blank" rel="noreferrer">打开官方入口</a>
-          </article>
-
-          <article class="tool-card" data-category="chat" data-keywords="Perplexity 搜索 引用 资料 来源">
-            <div class="tool-head">
-              <span class="tool-badge">搜索</span>
-              <h3>Perplexity</h3>
-            </div>
-            <p>适合带来源的资料检索、竞品调研、趋势查询和快速查证。</p>
-            <a href="https://www.perplexity.ai/" target="_blank" rel="noreferrer">打开官方入口</a>
-          </article>
-
-          <article class="tool-card" data-category="image" data-keywords="Midjourney 图片 绘画 海报 视觉">
-            <div class="tool-head">
-              <span class="tool-badge">图像</span>
-              <h3>Midjourney</h3>
-            </div>
-            <p>适合风格化图片、概念视觉、封面灵感和视觉探索。</p>
-            <a href="https://www.midjourney.com/" target="_blank" rel="noreferrer">打开官方入口</a>
-          </article>
-
-          <article class="tool-card" data-category="image video" data-keywords="即梦 图片 视频 剪映 抖音 创作">
-            <div class="tool-head">
-              <span class="tool-badge">图像视频</span>
-              <h3>即梦 AI</h3>
-            </div>
-            <p>适合中文图像生成、短视频素材、分镜灵感和内容创作。</p>
-            <a href="https://jimeng.jianying.com/" target="_blank" rel="noreferrer">打开官方入口</a>
-          </article>
-
-          <article class="tool-card" data-category="image office" data-keywords="Canva 可画 海报 PPT 设计 模板">
-            <div class="tool-head">
-              <span class="tool-badge">设计</span>
-              <h3>Canva</h3>
-            </div>
-            <p>适合海报、PPT、社媒图、封面和轻量设计模板。</p>
-            <a href="https://www.canva.com/" target="_blank" rel="noreferrer">打开官方入口</a>
-          </article>
-
-          <article class="tool-card" data-category="video" data-keywords="Runway 视频 生成 剪辑 影像">
-            <div class="tool-head">
-              <span class="tool-badge">视频</span>
-              <h3>Runway</h3>
-            </div>
-            <p>适合 AI 视频生成、影像编辑、创意短片和实验视觉。</p>
-            <a href="https://runwayml.com/" target="_blank" rel="noreferrer">打开官方入口</a>
-          </article>
-
-          <article class="tool-card" data-category="video" data-keywords="可灵 Kling 视频 生成 图生视频">
-            <div class="tool-head">
-              <span class="tool-badge">视频</span>
+              <span class="tool-badge">综合生成</span>
               <h3>可灵 AI</h3>
             </div>
-            <p>适合文生视频、图生视频、镜头运动和中文创作者视频素材。</p>
-            <a href="https://klingai.kuaishou.com/" target="_blank" rel="noreferrer">打开官方入口</a>
+            <p>适合文生视频、图生视频、首尾帧控制和需要明确镜头运动的画面。</p>
+            <a href="https://klingai.kuaishou.com/" target="_blank" rel="noreferrer">打开可灵官网</a>
           </article>
 
-          <article class="tool-card" data-category="video" data-keywords="Pika 视频 生成 动画 短片">
+          <article class="tool-card" data-category="generate china" data-keywords="即梦 剪映 中文 图片 视频 智能画布 首尾帧 短片">
             <div class="tool-head">
-              <span class="tool-badge">视频</span>
+              <span class="tool-badge">中文创作</span>
+              <h3>即梦 AI</h3>
+            </div>
+            <p>适合中文提示词、图片与视频连续创作，也便于衔接剪映完成短视频。</p>
+            <a href="https://jimeng.jianying.com/" target="_blank" rel="noreferrer">打开即梦官网</a>
+          </article>
+
+          <article class="tool-card" data-category="generate china" data-keywords="海螺 Hailuo MiniMax 图生视频 动作 人物 产品">
+            <div class="tool-head">
+              <span class="tool-badge">快速尝试</span>
+              <h3>海螺 AI</h3>
+            </div>
+            <p>适合把人物图、产品图和概念图快速变成有动作的短片素材。</p>
+            <a href="https://hailuoai.video/" target="_blank" rel="noreferrer">打开海螺官网</a>
+          </article>
+
+          <article class="tool-card" data-category="generate china" data-keywords="Vidu 生数 文生视频 图生视频 参考生视频 主体一致 动漫">
+            <div class="tool-head">
+              <span class="tool-badge">参考一致</span>
+              <h3>Vidu</h3>
+            </div>
+            <p>适合参考生视频、角色与物体一致性，以及动漫和高动态画面。</p>
+            <a href="https://www.vidu.com/zh" target="_blank" rel="noreferrer">打开 Vidu 官网</a>
+          </article>
+
+          <article class="tool-card" data-category="generate" data-keywords="Runway 国际 电影感 文生视频 图生视频 生成式影像 编辑">
+            <div class="tool-head">
+              <span class="tool-badge">专业工作流</span>
+              <h3>Runway</h3>
+            </div>
+            <p>适合电影感画面、生成式影像实验，以及需要更多后期工具的创作流程。</p>
+            <a href="https://runwayml.com/" target="_blank" rel="noreferrer">打开 Runway 官网</a>
+          </article>
+
+          <article class="tool-card" data-category="generate" data-keywords="Pika 特效 动画 短片 产品展示 风格化">
+            <div class="tool-head">
+              <span class="tool-badge">创意特效</span>
               <h3>Pika</h3>
             </div>
-            <p>适合短视频生成、风格化动画、产品展示和创意片段。</p>
-            <a href="https://pika.art/" target="_blank" rel="noreferrer">打开官方入口</a>
+            <p>适合短片、风格化动画、趣味特效和社交媒体创意片段。</p>
+            <a href="https://pika.art/" target="_blank" rel="noreferrer">打开 Pika 官网</a>
           </article>
 
-          <article class="tool-card" data-category="video image" data-keywords="剪映 CapCut 剪辑 字幕 视频">
+          <article class="tool-card" data-category="edit china" data-keywords="剪映 CapCut 剪辑 字幕 音频 降噪 口播 成片">
             <div class="tool-head">
-              <span class="tool-badge">剪辑</span>
-              <h3>剪映 / CapCut</h3>
+              <span class="tool-badge">剪辑发布</span>
+              <h3>剪映</h3>
             </div>
-            <p>适合短视频剪辑、字幕、模板化成片和社媒内容发布。</p>
-            <a href="https://www.capcut.cn/" target="_blank" rel="noreferrer">打开官方入口</a>
+            <p>适合把生成片段拼接成片，补字幕、配音、音乐、转场并导出发布。</p>
+            <a href="https://www.capcut.cn/" target="_blank" rel="noreferrer">打开剪映官网</a>
           </article>
 
-          <article class="tool-card" data-category="office image" data-keywords="Gamma PPT 演示 文档 页面">
+          <article class="tool-card" data-category="script" data-keywords="ChatGPT 脚本 分镜 文案 创意 旁白 提示词">
             <div class="tool-head">
-              <span class="tool-badge">演示</span>
-              <h3>Gamma</h3>
+              <span class="tool-badge">脚本分镜</span>
+              <h3>ChatGPT</h3>
             </div>
-            <p>适合快速生成演示文稿、项目说明页和结构化视觉文档。</p>
-            <a href="https://gamma.app/" target="_blank" rel="noreferrer">打开官方入口</a>
+            <p>适合确定选题、拆解 30 至 60 秒脚本、生成分镜表和改写视频提示词。</p>
+            <a href="https://chatgpt.com/" target="_blank" rel="noreferrer">打开 ChatGPT</a>
           </article>
 
-          <article class="tool-card" data-category="office" data-keywords="WPS AI Word Excel PPT PDF 办公">
+          <article class="tool-card" data-category="script china" data-keywords="Kimi 中文 长文 脚本 资料 口播 文案 分镜">
             <div class="tool-head">
-              <span class="tool-badge">办公</span>
-              <h3>WPS AI</h3>
+              <span class="tool-badge">中文策划</span>
+              <h3>Kimi</h3>
             </div>
-            <p>适合文档、表格、PPT、PDF 阅读和办公套件内处理。</p>
-            <a href="https://ai.wps.cn/" target="_blank" rel="noreferrer">打开官方入口</a>
-          </article>
-
-          <article class="tool-card" data-category="code" data-keywords="Cursor 编程 代码 IDE AI">
-            <div class="tool-head">
-              <span class="tool-badge">编程</span>
-              <h3>Cursor</h3>
-            </div>
-            <p>适合在编辑器里写代码、改代码、读项目和生成小工具。</p>
-            <a href="https://cursor.com/" target="_blank" rel="noreferrer">打开官方入口</a>
-          </article>
-
-          <article class="tool-card" data-category="code" data-keywords="GitHub Copilot 编程 代码 IDE">
-            <div class="tool-head">
-              <span class="tool-badge">编程</span>
-              <h3>GitHub Copilot</h3>
-            </div>
-            <p>适合在主流 IDE 中补全代码、解释代码和辅助开发流程。</p>
-            <a href="https://github.com/features/copilot" target="_blank" rel="noreferrer">打开官方入口</a>
+            <p>适合读取中文资料、提炼选题、整理口播稿和生成结构清楚的分镜初稿。</p>
+            <a href="https://www.kimi.com/" target="_blank" rel="noreferrer">打开 Kimi</a>
           </article>
         </div>
         <p class="empty-state" id="emptyState" hidden>没有匹配结果。换一个关键词，或切回“全部”。</p>
       </section>
 
-      <section class="routes" id="routes" aria-labelledby="routes-title">
+      <section class="guides" id="guides" aria-labelledby="guides-title">
         <div class="section-heading compact">
-          <p class="eyebrow">Use Routes</p>
-          <h2 id="routes-title">不知道先用哪个，从场景开始</h2>
+          <p class="eyebrow">Practical Guides</p>
+          <h2 id="guides-title">先解决三个最常见的问题</h2>
+          <p>工具会更新，但选型方法、创作流程和提示词结构可以反复使用。</p>
         </div>
-        <div class="route-grid">
-          <article>
+        <div class="guide-grid">
+          <article class="guide-card featured">
+            <p class="guide-meta">新手入门 · 约 8 分钟</p>
+            <h3>AI 短视频从脚本到成片的完整流程</h3>
+            <p>从选题、脚本、分镜、生成素材到剪映成片，按顺序完成第一条 30 至 60 秒视频。</p>
+            <a href="./guides/ai-video-workflow.html">查看完整流程</a>
+          </article>
+          <article class="guide-card">
+            <p class="guide-meta">工具选择 · 约 5 分钟</p>
+            <h3>可灵 AI 和即梦 AI 怎么选</h3>
+            <p>不按参数表比高低，直接按中文创作、画面控制和后续剪辑场景选择。</p>
+            <a href="./guides/kling-vs-jimeng.html">查看选择建议</a>
+          </article>
+          <article class="guide-card">
+            <p class="guide-meta">可复制 · 持续更新</p>
+            <h3>AI 视频提示词公式与模板</h3>
+            <p>用“主体 + 动作 + 镜头 + 场景 + 光线 + 风格”写出更可控的提示词。</p>
+            <a href="./guides/ai-video-prompt-template.html">领取免费模板</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="workflow" id="workflow" aria-labelledby="workflow-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">One Clear Workflow</p>
+          <h2 id="workflow-title">一条能真正做完的路线</h2>
+        </div>
+        <ol class="workflow-list">
+          <li>
             <span>01</span>
-            <h3>做短视频</h3>
-            <p>先用 ChatGPT 或 Kimi 写脚本，再用即梦、可灵或 Runway 出分镜素材，最后用剪映成片。</p>
-          </article>
-          <article>
+            <div>
+              <h3>先写 30 秒脚本</h3>
+              <p>只保留一个主题、一个开头钩子和三个画面信息点，避免一开始就做长片。</p>
+            </div>
+          </li>
+          <li>
             <span>02</span>
-            <h3>做封面海报</h3>
-            <p>先让通用模型给版式方向，再用 Midjourney 或即梦出图，最后用 Canva 调整文字和尺寸。</p>
-          </article>
-          <article>
+            <div>
+              <h3>把脚本拆成 5 个镜头</h3>
+              <p>每个镜头只表达一个动作，先确定主体与构图，再考虑运镜和特效。</p>
+            </div>
+          </li>
+          <li>
             <span>03</span>
-            <h3>写报告 PPT</h3>
-            <p>先用 Perplexity 查资料来源，再用 Claude、Kimi 或 ChatGPT 梳理结构，最后用 Gamma 或 WPS AI 生成初稿。</p>
-          </article>
-        </div>
+            <div>
+              <h3>先图后视频更稳定</h3>
+              <p>先生成满意的关键画面，再用图生视频让它动起来，通常比一句话直接生成整片更可控。</p>
+            </div>
+          </li>
+          <li>
+            <span>04</span>
+            <div>
+              <h3>最后用剪映成片</h3>
+              <p>统一比例、节奏、字幕、配音和音乐。生成工具负责素材，剪辑工具负责成片。</p>
+            </div>
+          </li>
+        </ol>
       </section>
 
-      <section class="prompts" id="prompts" aria-labelledby="prompts-title">
-        <div class="section-heading compact">
-          <p class="eyebrow">Prompt Starters</p>
-          <h2 id="prompts-title">三条可直接复制的提示词</h2>
-        </div>
-        <div class="prompt-grid">
-          <article>
-            <h3>选工具</h3>
-            <p>我想完成【任务】，预算是【免费/低预算/可付费】，设备是【电脑/手机】，请推荐 3 个工具并说明选择顺序。</p>
-          </article>
-          <article>
-            <h3>做脚本</h3>
-            <p>请把【主题】拆成 60 秒短视频脚本，包含开头钩子、3 个信息点、画面建议和结尾行动。</p>
-          </article>
-          <article>
-            <h3>查资料</h3>
-            <p>请围绕【问题】列出需要核验的事实点、检索关键词、可信来源类型，并给出最终报告大纲。</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="submit" id="submit" aria-labelledby="submit-title">
+      <section class="contact" id="contact" aria-labelledby="contact-title">
         <div>
-          <p class="eyebrow">Submit</p>
-          <h2 id="submit-title">想补充工具？</h2>
-          <p>后续可以把这里接到邮箱、表单、公众号或后台。现在先作为公开导航页，把核心入口跑通。</p>
+          <p class="eyebrow">Creator Support</p>
+          <h2 id="contact-title">有具体视频想法，但不知道怎么落地？</h2>
+          <p>可微信联系，说明你的行业、视频用途和现有素材。当前先提供工具选择、脚本拆解和提示词方向咨询。</p>
         </div>
-        <a class="button primary" href="mailto:hello@zhiyingnav.com?subject=提交 AI 工具">提交工具</a>
+        <div class="contact-box" aria-label="微信联系方式">
+          <small>微信号</small>
+          <strong>w2582479036</strong>
+          <span>添加时备注“智影导航”</span>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© 2026 智影导航 · zhiyingnav.com</p>
-      <p>工具功能和价格变化较快，请以官方页面为准。</p>
+      <div>
+        <p>© 2026 智影导航 · zhiyingnav.com</p>
+        <p>工具功能、价格和地区可用性以官方页面为准。</p>
+      </div>
+      <nav aria-label="页脚导航">
+        <a href="./privacy.html">隐私</a>
+        <a href="./disclaimer.html">声明</a>
+        <a href="./terms.html">条款</a>
+      </nav>
     </footer>
 
     <script src="./home.js"></script>

@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI 短视频从脚本到成片的完整流程 | 智影导航</title>
+    <meta
+      name="description"
+      content="一套适合新手的 AI 短视频制作流程：确定选题、写 30 秒脚本、拆分镜、生成关键画面、图生视频，最后用剪映完成字幕、配音和导出。"
+    />
+    <meta name="theme-color" content="#fbfbf7" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="AI 短视频从脚本到成片的完整流程" />
+    <meta property="og:description" content="第一次做 AI 短视频，照着这 7 步完成一条 30 至 60 秒作品。" />
+    <meta property="og:image" content="https://zhiyingnav.com/assets/site-preview.png" />
+    <link rel="canonical" href="https://zhiyingnav.com/guides/ai-video-workflow.html" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../home.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "AI 短视频从脚本到成片的完整流程",
+        "description": "适合新手的 AI 短视频七步制作流程",
+        "datePublished": "2026-07-13",
+        "dateModified": "2026-07-13",
+        "author": { "@type": "Organization", "name": "智影导航" },
+        "publisher": { "@type": "Organization", "name": "智影导航" },
+        "mainEntityOfPage": "https://zhiyingnav.com/guides/ai-video-workflow.html"
+      }
+    </script>
+  </head>
+  <body class="article-body">
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="返回智影导航首页">
+        <span class="brand-mark">智</span>
+        <span class="brand-copy">
+          <strong>智影导航</strong>
+          <small>AI 视频创作指南</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="../index.html#tools">工具</a>
+        <a href="../index.html#guides">教程</a>
+        <a href="./kling-vs-jimeng.html">工具对比</a>
+      </nav>
+      <a class="header-action" href="./ai-video-prompt-template.html">提示词模板</a>
+    </header>
+
+    <main>
+      <header class="article-hero">
+        <div class="article-hero-inner">
+          <nav class="breadcrumbs" aria-label="面包屑">
+            <a href="../index.html">首页</a>
+            <span>/</span>
+            <span>实战教程</span>
+          </nav>
+          <p class="eyebrow">AI Video Workflow</p>
+          <h1>AI 短视频从脚本到成片的完整流程</h1>
+          <p class="article-lead">
+            第一次做，不要挑战三分钟剧情片。先完成一条 30 至 60 秒、5 个镜头以内的作品，跑通流程比追求一次生成完美更重要。
+          </p>
+          <div class="article-meta">
+            <span>更新：2026 年 7 月 13 日</span>
+            <span>阅读约 8 分钟</span>
+            <span>适合：零基础与短视频创作者</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="article-layout">
+        <article class="article-main">
+          <h2 id="prepare">开始前，只准备三样东西</h2>
+          <ul>
+            <li>一个具体主题，例如“旧照片中的夏天动起来”，不要只写“做一个好看的视频”。</li>
+            <li>一个发布比例：抖音、小红书常用竖屏 9:16；B 站或横版展示常用 16:9。</li>
+            <li>一个生成工具和一个剪辑工具。新手可从即梦或可灵生成素材，再用剪映成片。</li>
+          </ul>
+          <div class="takeaway">
+            <strong>先定限制</strong>
+            <p>建议首条作品控制在 30 秒、5 个镜头、每个镜头 3 至 6 秒。限制越明确，越容易真正做完。</p>
+          </div>
+
+          <h2 id="topic">第 1 步：把选题写成一句结果</h2>
+          <p>一个能执行的选题，应当同时说清“给谁看、看什么、看完得到什么”。</p>
+          <div class="template-block">
+            <strong>选题公式</strong>
+            <p>给【目标观众】看，用【画面主题】展示【一个明确结果或情绪】。</p>
+            <p>例：给喜欢老照片的人看，用一组江南旧街画面展示“照片里的人重新走起来”。</p>
+          </div>
+          <p>这一阶段不要先选模型。工具只能放大已经清楚的想法，不能替代选题本身。</p>
+
+          <h2 id="script">第 2 步：写 30 秒脚本</h2>
+          <p>30 秒脚本可以用“钩子、展开、收束”三段式。每句话都要能对应一个画面。</p>
+          <ol>
+            <li><strong>0 至 3 秒：</strong>给出最有变化的一帧或一句问题，阻止观众划走。</li>
+            <li><strong>3 至 24 秒：</strong>用 3 个画面推进，不要同时塞入太多信息。</li>
+            <li><strong>24 至 30 秒：</strong>给出结果、情绪落点或下一步行动。</li>
+          </ol>
+          <div class="template-block">
+            <strong>可交给对话模型的脚本提示词</strong>
+            <p>请把【主题】写成 30 秒竖屏短视频脚本。目标观众是【人群】。包含开头钩子、3 个画面信息点和结尾收束；旁白不超过 120 字，每句话都对应一个可生成的画面。</p>
+          </div>
+
+          <h2 id="storyboard">第 3 步：拆成 5 个以内的分镜</h2>
+          <p>把脚本整理成表格：镜头编号、画面主体、动作、景别、时长、旁白。一个镜头只保留一个主要动作。</p>
+          <div class="comparison-wrap">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>镜头</th>
+                  <th>画面</th>
+                  <th>动作与镜头</th>
+                  <th>时长</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td>旧照片中的街道</td>
+                  <td>从静止开始，缓慢推进</td>
+                  <td>4 秒</td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>街边人物</td>
+                  <td>人物回头，微风吹动衣角</td>
+                  <td>5 秒</td>
+                </tr>
+                <tr>
+                  <td>03</td>
+                  <td>有轨电车</td>
+                  <td>从远处驶近，固定机位</td>
+                  <td>5 秒</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="frames">第 4 步：先生成关键画面</h2>
+          <p>
+            对新手来说，“先图后视频”通常更容易控制。先把人物外观、服装、场景、色彩和构图定下来，再让图片产生动作。需要同一角色反复出现时，应固定一张或一组参考图，并保持描述顺序一致。
+          </p>
+          <ul>
+            <li>人物镜头：先确定脸、发型、服装和年龄，再改场景。</li>
+            <li>产品镜头：尽量使用真实产品图作为参考，不让模型重画商标和结构。</li>
+            <li>风格镜头：先统一色调、材质和光线，再分别生成不同景别。</li>
+          </ul>
+
+          <h2 id="animate">第 5 步：用图生视频做动作</h2>
+          <p>视频提示词重点描述“怎么动”，不要重复写一大段图片里已经存在的外观。推荐结构是：主体动作 + 镜头运动 + 环境变化 + 节奏限制。</p>
+          <div class="template-block">
+            <strong>图生视频示例</strong>
+            <p>人物缓慢回头看向镜头，衣角被微风轻轻吹动；镜头从中景平稳推进到近景，背景行人自然经过，动作克制、连续，无突然变形。</p>
+          </div>
+          <p>每次只改一个变量。第一版动作不对，就先改动作；不要同时换场景、机位、人物和风格，否则无法判断是哪一项影响结果。</p>
+
+          <h2 id="edit">第 6 步：剪映里完成真正的“成片”</h2>
+          <ol>
+            <li>先按节奏排列素材，删掉不自然的头尾帧。</li>
+            <li>补旁白，再根据人声调整镜头长度。</li>
+            <li>生成字幕并逐句检查，避免专有名词识别错误。</li>
+            <li>音乐音量要低于人声；无旁白时再让音乐承担节奏。</li>
+            <li>统一画幅、分辨率与帧率后导出，发布前完整看一遍。</li>
+          </ol>
+          <p>
+            剪映官方目前列出的 AI 能力包括文字成片、智能剪口播、文本朗读、字幕相关处理和音频降噪等，实际功能以你所用版本为准。查看
+            <a href="https://www.capcut.cn/?lang=zh" target="_blank" rel="noreferrer">剪映官方功能页</a>。
+          </p>
+
+          <h2 id="review">第 7 步：只检查四件事</h2>
+          <ul>
+            <li><strong>开头：</strong>前 3 秒是否直接出现最值得看的画面？</li>
+            <li><strong>连续性：</strong>人物、产品和场景是否在镜头切换后明显变样？</li>
+            <li><strong>节奏：</strong>是否有某个镜头停留太久，却没有新信息？</li>
+            <li><strong>版权与标识：</strong>是否使用了无权使用的人脸、商标、音乐或受保护素材？</li>
+          </ul>
+          <div class="takeaway">
+            <strong>完成标准</strong>
+            <p>观众能看懂、主体不乱变、声音听得清、画幅适合发布，就可以先发。下一条再改一个问题。</p>
+          </div>
+
+          <div class="source-note">
+            <strong>资料依据</strong>
+            <p>
+              本文工具能力描述参考
+              <a href="https://jimeng.jianying.com/" target="_blank" rel="noreferrer">即梦官方页</a>、
+              <a href="https://app.klingai.com/cn/quickstart/klingai-video-3-model-user-guide" target="_blank" rel="noreferrer">可灵官方指南</a>和
+              <a href="https://www.capcut.cn/?lang=zh" target="_blank" rel="noreferrer">剪映官网</a>。模型、额度和界面会更新，请以官方页面为准。
+            </p>
+          </div>
+
+          <section class="article-cta" aria-label="咨询入口">
+            <div>
+              <h2>卡在选题、分镜或提示词？</h2>
+              <p>带上你的行业、用途和现有素材，加微信时备注“智影导航”。</p>
+            </div>
+            <strong>w2582479036</strong>
+          </section>
+        </article>
+
+        <aside class="article-aside">
+          <strong>本文目录</strong>
+          <nav aria-label="文章目录">
+            <a href="#prepare">开始前准备</a>
+            <a href="#topic">确定选题</a>
+            <a href="#script">写 30 秒脚本</a>
+            <a href="#storyboard">拆分镜</a>
+            <a href="#frames">生成关键画面</a>
+            <a href="#animate">图生视频</a>
+            <a href="#edit">剪辑成片</a>
+            <a href="#review">发布前检查</a>
+          </nav>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p>© 2026 智影导航 · zhiyingnav.com</p>
+        <p>工具功能和价格变化较快，请以官方页面为准。</p>
+      </div>
+      <nav aria-label="页脚导航">
+        <a href="../index.html">首页</a>
+        <a href="./kling-vs-jimeng.html">下一篇</a>
+      </nav>
+    </footer>
+  </body>
+</html>
