@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://zhiyingnav.com/</loc></url>
-  <url><loc>https://zhiyingnav.com/privacy.html</loc></url>
-  <url><loc>https://zhiyingnav.com/terms.html</loc></url>
-  <url><loc>https://zhiyingnav.com/disclaimer.html</loc></url>
-  <url><loc>https://zhiyingnav.com/checkout.html</loc></url>
-  <url><loc>https://zhiyingnav.com/lead.html</loc></url>
+  <url>
+    <loc>https://zhiyingnav.com/</loc>
+  </url>
 </urlset>
