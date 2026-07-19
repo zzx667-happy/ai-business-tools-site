@@ -17,8 +17,18 @@
     <div class="checkout-price"><span>¥9.9</span><small>首发体验价 · 付款后人工发放</small></div>
     <div class="checkout-included"><h2>包含内容</h2><ul><li>AI 工具用途、价格与免费替代</li><li>办公、创作、学习和经营工作流</li><li>50 条可直接修改的中文提示词</li><li>持续更新说明和官方来源</li></ul></div>
     <div class="detail-warning"><strong>领取方式</strong><br>目前网站使用 GitHub Pages，尚未接入自动支付回调。请先完成付款，再将付款截图或订单号发送到微信 <strong>w2582479036</strong>，我会人工发放资料。</div>
-    <div class="checkout-actions"><a class="primary-action" href="mailto:hello@zhiyingnav.com?subject=AI效率资料库购买&body=我已付款，订单号或付款截图将在微信发送。">付款后联系领取</a><a class="secondary-action" href="./index.html">返回网站</a></div>
+    <div class="checkout-actions"><button class="primary-action" type="button" data-copy-wechat>复制微信号并领取</button><a class="secondary-action" href="./index.html">返回网站</a></div>
+    <p id="copyNotice" class="detail-summary" hidden style="margin-top:14px;font-size:.86rem">微信号：w2582479036。请打开微信搜索该微信号，发送付款截图或订单号。</p>
     <p class="detail-summary" style="margin-top:18px;font-size:.82rem">付款前可以先浏览网站全部免费工具和教程，确认内容适合自己后再购买。</p>
   </article></main>
+  <script>
+    const copyButton = document.querySelector('[data-copy-wechat]');
+    const copyNotice = document.querySelector('#copyNotice');
+    copyButton?.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText('w2582479036'); } catch {}
+      copyNotice.hidden = false;
+      copyButton.textContent = '微信号已复制';
+    });
+  </script>
 </body>
 </html>
