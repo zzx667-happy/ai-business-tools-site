@@ -1,283 +1,82 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>智影导航 | AI 视频创作工具、教程与提示词</title>
-    <meta
-      name="description"
-      content="智影导航专注 AI 视频与短视频创作，整理可灵、即梦、Runway、海螺、Vidu、剪映等官方入口，并提供工具对比、成片流程和提示词模板。"
-    />
-    <meta name="theme-color" content="#fbfbf7" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="智影导航" />
-    <meta property="og:title" content="智影导航 | AI 视频创作工具与实战指南" />
-    <meta
-      property="og:description"
-      content="从选工具、写提示词到剪辑成片，给中文创作者一条清楚的 AI 视频工作流。"
-    />
-    <meta property="og:image" content="https://zhiyingnav.com/assets/site-preview.png" />
-    <link rel="canonical" href="https://zhiyingnav.com/" />
-    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="./home.css" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "智影导航",
-        "url": "https://zhiyingnav.com/",
-        "description": "面向中文创作者的 AI 视频工具、教程与提示词站点"
-      }
-    </script>
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="智影导航首页">
-        <span class="brand-mark">智</span>
-        <span class="brand-copy">
-          <strong>智影导航</strong>
-          <small>AI 视频创作指南</small>
-        </span>
-      </a>
-      <nav class="nav-links" aria-label="主导航">
-        <a href="#tools">工具</a>
-        <a href="#guides">教程</a>
-        <a href="#workflow">流程</a>
-        <a href="#contact">咨询</a>
-      </nav>
-      <a class="header-action" href="./guides/ai-video-prompt-template.html">提示词模板</a>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>智盈导航 | 把 AI 变成真正的生产力</title>
+  <meta name="description" content="为普通人筛选真正好用的 AI 与办公工具，提供实测推荐、可复制工作流和低成本数字资料。">
+  <meta name="theme-color" content="#111412">
+  <link rel="canonical" href="https://zhiyingnav.com/">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./home.css">
+  <link rel="stylesheet" href="./mobile-fixes.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="智盈导航首页"><span class="brand-mark">智</span><span><strong>智盈导航</strong><small>AI 效率与增长指南</small></span></a>
+    <nav class="nav-links" aria-label="主导航"><a href="#solutions">场景</a><a href="#tools">工具</a><a href="#product">资料库</a><a href="#method">方法</a></nav>
+    <a class="header-action" href="./checkout.html">获取资料库 <span>→</span></a>
+  </header>
 
-    <main id="top">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">智影导航 · 专注 AI 视频与短视频</p>
-          <h1>AI 视频创作工具与实战指南</h1>
-          <p class="hero-text">
-            不再堆一大串 AI 名称。这里按“写脚本、生成画面、剪辑成片”整理工具，并给出可以直接照着做的中文流程与提示词。
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#tools">按用途选工具</a>
-            <a class="button secondary" href="./guides/ai-video-workflow.html">看完整成片流程</a>
-          </div>
-          <dl class="quick-stats" aria-label="站点内容概览">
-            <div>
-              <dt>9 个</dt>
-              <dd>精选创作工具</dd>
-            </div>
-            <div>
-              <dt>3 篇</dt>
-              <dd>原创实用指南</dd>
-            </div>
-            <div>
-              <dt>1 条</dt>
-              <dd>从想法到成片</dd>
-            </div>
-          </dl>
-        </div>
-
-        <div class="hero-visual" aria-label="智影导航工具工作台预览">
-          <img src="./assets/site-preview.png" alt="智影导航 AI 视频工具工作台预览" />
-        </div>
-      </section>
-
-      <section class="finder" id="tools" aria-labelledby="tools-title">
-        <div class="section-heading">
-          <p class="eyebrow">Video Tool Finder</p>
-          <h2 id="tools-title">先看你要做哪一步</h2>
-          <p>每个入口都指向官方站点。免费额度、模型版本和地区可用性变化较快，请以官方页面为准。</p>
-        </div>
-
-        <div class="filter-panel" role="search">
-          <label class="search-box">
-            <span>搜索工具或用途</span>
-            <input id="toolSearch" type="search" placeholder="例如：图生视频、人物一致、剪辑、脚本、动漫" />
-          </label>
-          <div class="chips" aria-label="工具分类筛选">
-            <button class="chip active" data-filter="all" type="button">全部</button>
-            <button class="chip" data-filter="generate" type="button">生成视频</button>
-            <button class="chip" data-filter="edit" type="button">剪辑成片</button>
-            <button class="chip" data-filter="script" type="button">脚本策划</button>
-            <button class="chip" data-filter="china" type="button">中文友好</button>
-          </div>
-        </div>
-
-        <div class="tool-grid" id="toolGrid">
-          <article class="tool-card" data-category="generate china" data-keywords="可灵 Kling 文生视频 图生视频 首尾帧 多镜头 人物一致">
-            <div class="tool-head">
-              <span class="tool-badge">综合生成</span>
-              <h3>可灵 AI</h3>
-            </div>
-            <p>适合文生视频、图生视频、首尾帧控制和需要明确镜头运动的画面。</p>
-            <a href="https://klingai.kuaishou.com/" target="_blank" rel="noreferrer">打开可灵官网</a>
-          </article>
-
-          <article class="tool-card" data-category="generate china" data-keywords="即梦 剪映 中文 图片 视频 智能画布 首尾帧 短片">
-            <div class="tool-head">
-              <span class="tool-badge">中文创作</span>
-              <h3>即梦 AI</h3>
-            </div>
-            <p>适合中文提示词、图片与视频连续创作，也便于衔接剪映完成短视频。</p>
-            <a href="https://jimeng.jianying.com/" target="_blank" rel="noreferrer">打开即梦官网</a>
-          </article>
-
-          <article class="tool-card" data-category="generate china" data-keywords="海螺 Hailuo MiniMax 图生视频 动作 人物 产品">
-            <div class="tool-head">
-              <span class="tool-badge">快速尝试</span>
-              <h3>海螺 AI</h3>
-            </div>
-            <p>适合把人物图、产品图和概念图快速变成有动作的短片素材。</p>
-            <a href="https://hailuoai.video/" target="_blank" rel="noreferrer">打开海螺官网</a>
-          </article>
-
-          <article class="tool-card" data-category="generate china" data-keywords="Vidu 生数 文生视频 图生视频 参考生视频 主体一致 动漫">
-            <div class="tool-head">
-              <span class="tool-badge">参考一致</span>
-              <h3>Vidu</h3>
-            </div>
-            <p>适合参考生视频、角色与物体一致性，以及动漫和高动态画面。</p>
-            <a href="https://www.vidu.com/zh" target="_blank" rel="noreferrer">打开 Vidu 官网</a>
-          </article>
-
-          <article class="tool-card" data-category="generate" data-keywords="Runway 国际 电影感 文生视频 图生视频 生成式影像 编辑">
-            <div class="tool-head">
-              <span class="tool-badge">专业工作流</span>
-              <h3>Runway</h3>
-            </div>
-            <p>适合电影感画面、生成式影像实验，以及需要更多后期工具的创作流程。</p>
-            <a href="https://runwayml.com/" target="_blank" rel="noreferrer">打开 Runway 官网</a>
-          </article>
-
-          <article class="tool-card" data-category="generate" data-keywords="Pika 特效 动画 短片 产品展示 风格化">
-            <div class="tool-head">
-              <span class="tool-badge">创意特效</span>
-              <h3>Pika</h3>
-            </div>
-            <p>适合短片、风格化动画、趣味特效和社交媒体创意片段。</p>
-            <a href="https://pika.art/" target="_blank" rel="noreferrer">打开 Pika 官网</a>
-          </article>
-
-          <article class="tool-card" data-category="edit china" data-keywords="剪映 CapCut 剪辑 字幕 音频 降噪 口播 成片">
-            <div class="tool-head">
-              <span class="tool-badge">剪辑发布</span>
-              <h3>剪映</h3>
-            </div>
-            <p>适合把生成片段拼接成片，补字幕、配音、音乐、转场并导出发布。</p>
-            <a href="https://www.capcut.cn/" target="_blank" rel="noreferrer">打开剪映官网</a>
-          </article>
-
-          <article class="tool-card" data-category="script" data-keywords="ChatGPT 脚本 分镜 文案 创意 旁白 提示词">
-            <div class="tool-head">
-              <span class="tool-badge">脚本分镜</span>
-              <h3>ChatGPT</h3>
-            </div>
-            <p>适合确定选题、拆解 30 至 60 秒脚本、生成分镜表和改写视频提示词。</p>
-            <a href="https://chatgpt.com/" target="_blank" rel="noreferrer">打开 ChatGPT</a>
-          </article>
-
-          <article class="tool-card" data-category="script china" data-keywords="Kimi 中文 长文 脚本 资料 口播 文案 分镜">
-            <div class="tool-head">
-              <span class="tool-badge">中文策划</span>
-              <h3>Kimi</h3>
-            </div>
-            <p>适合读取中文资料、提炼选题、整理口播稿和生成结构清楚的分镜初稿。</p>
-            <a href="https://www.kimi.com/" target="_blank" rel="noreferrer">打开 Kimi</a>
-          </article>
-        </div>
-        <p class="empty-state" id="emptyState" hidden>没有匹配结果。换一个关键词，或切回“全部”。</p>
-      </section>
-
-      <section class="guides" id="guides" aria-labelledby="guides-title">
-        <div class="section-heading compact">
-          <p class="eyebrow">Practical Guides</p>
-          <h2 id="guides-title">先解决三个最常见的问题</h2>
-          <p>工具会更新，但选型方法、创作流程和提示词结构可以反复使用。</p>
-        </div>
-        <div class="guide-grid">
-          <article class="guide-card featured">
-            <p class="guide-meta">新手入门 · 约 8 分钟</p>
-            <h3>AI 短视频从脚本到成片的完整流程</h3>
-            <p>从选题、脚本、分镜、生成素材到剪映成片，按顺序完成第一条 30 至 60 秒视频。</p>
-            <a href="./guides/ai-video-workflow.html">查看完整流程</a>
-          </article>
-          <article class="guide-card">
-            <p class="guide-meta">工具选择 · 约 5 分钟</p>
-            <h3>可灵 AI 和即梦 AI 怎么选</h3>
-            <p>不按参数表比高低，直接按中文创作、画面控制和后续剪辑场景选择。</p>
-            <a href="./guides/kling-vs-jimeng.html">查看选择建议</a>
-          </article>
-          <article class="guide-card">
-            <p class="guide-meta">可复制 · 持续更新</p>
-            <h3>AI 视频提示词公式与模板</h3>
-            <p>用“主体 + 动作 + 镜头 + 场景 + 光线 + 风格”写出更可控的提示词。</p>
-            <a href="./guides/ai-video-prompt-template.html">领取免费模板</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="workflow" id="workflow" aria-labelledby="workflow-title">
-        <div class="section-heading compact">
-          <p class="eyebrow">One Clear Workflow</p>
-          <h2 id="workflow-title">一条能真正做完的路线</h2>
-        </div>
-        <ol class="workflow-list">
-          <li>
-            <span>01</span>
-            <div>
-              <h3>先写 30 秒脚本</h3>
-              <p>只保留一个主题、一个开头钩子和三个画面信息点，避免一开始就做长片。</p>
-            </div>
-          </li>
-          <li>
-            <span>02</span>
-            <div>
-              <h3>把脚本拆成 5 个镜头</h3>
-              <p>每个镜头只表达一个动作，先确定主体与构图，再考虑运镜和特效。</p>
-            </div>
-          </li>
-          <li>
-            <span>03</span>
-            <div>
-              <h3>先图后视频更稳定</h3>
-              <p>先生成满意的关键画面，再用图生视频让它动起来，通常比一句话直接生成整片更可控。</p>
-            </div>
-          </li>
-          <li>
-            <span>04</span>
-            <div>
-              <h3>最后用剪映成片</h3>
-              <p>统一比例、节奏、字幕、配音和音乐。生成工具负责素材，剪辑工具负责成片。</p>
-            </div>
-          </li>
-        </ol>
-      </section>
-
-      <section class="contact" id="contact" aria-labelledby="contact-title">
-        <div>
-          <p class="eyebrow">Creator Support</p>
-          <h2 id="contact-title">有具体视频想法，但不知道怎么落地？</h2>
-          <p>可微信联系，说明你的行业、视频用途和现有素材。当前先提供工具选择、脚本拆解和提示词方向咨询。</p>
-        </div>
-        <div class="contact-box" aria-label="微信联系方式">
-          <small>微信号</small>
-          <strong>w2582479036</strong>
-          <span>添加时备注“智影导航”</span>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div>
-        <p>© 2026 智影导航 · zhiyingnav.com</p>
-        <p>工具功能、价格和地区可用性以官方页面为准。</p>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-noise"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span>为普通人精选 · 实测后再推荐</p>
+        <h1>少研究工具，<br><em>多完成事情。</em></h1>
+        <p class="hero-text">把复杂的 AI 选择变成清楚的行动方案。办公提效、内容创作、求职学习和小生意增长，每个推荐都告诉你：适合谁、怎么用、值不值得付费。</p>
+        <div class="hero-actions"><a class="button primary" href="#tools">按任务找工具 <span>↗</span></a><a class="button ghost" href="#product">查看 9.9 元资料库</a></div>
+        <div class="trust-line"><span>不堆数量</span><span>不卖焦虑</span><span>不承诺暴富</span></div>
       </div>
-      <nav aria-label="页脚导航">
-        <a href="./privacy.html">隐私</a>
-        <a href="./disclaimer.html">声明</a>
-        <a href="./terms.html">条款</a>
-      </nav>
-    </footer>
+      <div class="hero-console reveal" aria-label="AI 工具选择器预览">
+        <div class="console-bar"><span></span><span></span><span></span><small>ZH1YING / TASK ROUTER</small></div>
+        <div class="console-body">
+          <p class="console-label">你今天想完成什么？</p>
+          <div class="task active"><b>01</b><span><strong>30 分钟做完一份汇报</strong><small>大纲 → PPT → 演讲稿</small></span><i>12 min</i></div>
+          <div class="task"><b>02</b><span><strong>把想法做成短视频</strong><small>脚本 → 画面 → 剪辑</small></span><i>36 min</i></div>
+          <div class="task"><b>03</b><span><strong>优化简历与面试准备</strong><small>诊断 → 改写 → 模拟</small></span><i>24 min</i></div>
+          <div class="route"><span>推荐组合</span><strong>Kimi + Gamma + Canva</strong><small>预计节省 1.8 小时</small></div>
+        </div>
+      </div>
+      <div class="scroll-cue">SCROLL <span></span></div>
+    </section>
 
-    <script src="./home.js"></script>
-  </body>
+    <section class="signal-strip" aria-label="网站数据"><div><strong data-count="24">0</strong><span>个精选工具</span></div><div><strong data-count="8">0</strong><span>套可复制流程</span></div><div><strong>¥0 起</strong><span>优先推荐免费方案</span></div><p>选择标准：能上手 · 有结果 · 成本透明</p></section>
+
+    <section class="solutions" id="solutions">
+      <div class="section-heading reveal"><p class="eyebrow"><span></span>从问题出发</p><h2>不是更多工具，<br>是更短的完成路径。</h2></div>
+      <div class="solution-grid">
+        <article class="solution-card reveal"><span class="index">01</span><div class="solution-icon">文</div><h3>办公提效</h3><p>写材料、做 PPT、整理表格，把重复工作压缩成稳定流程。</p><a href="#tools" data-set-filter="office">查看办公组合 →</a></article>
+        <article class="solution-card reveal"><span class="index">02</span><div class="solution-icon">创</div><h3>内容创作</h3><p>从选题、脚本到图片和视频，找到适合新手的轻量方案。</p><a href="#tools" data-set-filter="content">查看创作组合 →</a></article>
+        <article class="solution-card reveal"><span class="index">03</span><div class="solution-icon">学</div><h3>学习求职</h3><p>总结资料、练习表达、优化简历，少走信息差弯路。</p><a href="#tools" data-set-filter="study">查看学习组合 →</a></article>
+        <article class="solution-card reveal"><span class="index">04</span><div class="solution-icon">营</div><h3>小生意增长</h3><p>制作商品内容、客服话术和营销素材，降低试错成本。</p><a href="#tools" data-set-filter="business">查看经营组合 →</a></article>
+      </div>
+    </section>
+
+    <section class="finder" id="tools">
+      <div class="finder-head reveal"><div><p class="eyebrow light"><span></span>精选工具库</p><h2>按你要完成的任务筛选</h2></div><label class="search-box"><span>⌕</span><input id="toolSearch" type="search" placeholder="搜索工具或用途…" aria-label="搜索工具"></label></div>
+      <div class="chips reveal" aria-label="工具分类"><button class="chip active" data-filter="all">全部</button><button class="chip" data-filter="office">办公</button><button class="chip" data-filter="content">创作</button><button class="chip" data-filter="study">学习求职</button><button class="chip" data-filter="business">经营</button></div>
+      <div class="tool-grid" id="toolGrid">
+        <article class="tool-card reveal" data-category="office study" data-keywords="kimi 长文 总结 文档 写作"><div class="tool-top"><span class="tool-logo kimi">K</span><span class="tag free">免费可用</span></div><h3>Kimi</h3><p>读长文档、整理资料和生成中文初稿，新手上手成本低。</p><div class="tool-meta"><span>长文处理</span><span>中文友好</span></div><a href="https://www.kimi.com/" target="_blank" rel="noreferrer">打开官网 <span>↗</span></a></article>
+        <article class="tool-card reveal" data-category="office business" data-keywords="gamma ppt 演示 汇报"><div class="tool-top"><span class="tool-logo gamma">G</span><span class="tag">效率首选</span></div><h3>Gamma</h3><p>从大纲快速生成结构完整的演示文稿，适合汇报初稿。</p><div class="tool-meta"><span>PPT</span><span>演示文稿</span></div><a href="https://gamma.app/" target="_blank" rel="noreferrer">打开官网 <span>↗</span></a></article>
+        <article class="tool-card reveal" data-category="content business" data-keywords="canva 图片 海报 设计 营销"><div class="tool-top"><span class="tool-logo canva">C</span><span class="tag free">免费可用</span></div><h3>Canva</h3><p>用模板制作海报、社媒图片和简单视频，适合非设计人员。</p><div class="tool-meta"><span>平面设计</span><span>营销素材</span></div><a href="https://www.canva.cn/" target="_blank" rel="noreferrer">打开官网 <span>↗</span></a></article>
+        <article class="tool-card reveal" data-category="content business" data-keywords="剪映 视频 字幕 剪辑 口播"><div class="tool-top"><span class="tool-logo capcut">剪</span><span class="tag free">免费可用</span></div><h3>剪映</h3><p>剪辑、字幕、配音和包装一站完成，适合短视频最终成片。</p><div class="tool-meta"><span>视频剪辑</span><span>自动字幕</span></div><a href="https://www.capcut.cn/" target="_blank" rel="noreferrer">打开官网 <span>↗</span></a></article>
+        <article class="tool-card reveal" data-category="office study content" data-keywords="chatgpt 写作 分析 编程 学习"><div class="tool-top"><span class="tool-logo chatgpt">◎</span><span class="tag">综合能力</span></div><h3>ChatGPT</h3><p>适合分析、写作、学习和复杂任务拆解，需要清晰提问。</p><div class="tool-meta"><span>通用助手</span><span>深度分析</span></div><a href="https://chatgpt.com/" target="_blank" rel="noreferrer">打开官网 <span>↗</span></a></article>
+        <article class="tool-card reveal" data-category="content business" data-keywords="可灵 视频 图生视频 营销"><div class="tool-top"><span class="tool-logo kling">可</span><span class="tag">视频生成</span></div><h3>可灵 AI</h3><p>把文字或图片生成视频，适合产品展示和创意短片素材。</p><div class="tool-meta"><span>AI 视频</span><span>中文友好</span></div><a href="https://klingai.kuaishou.com/" target="_blank" rel="noreferrer">打开官网 <span>↗</span></a></article>
+      </div>
+      <p id="emptyState" class="empty-state" hidden>没有匹配结果，试试“写作”“视频”或切换分类。</p>
+    </section>
+
+    <section class="product" id="product">
+      <div class="product-copy reveal"><p class="eyebrow"><span></span>低成本开始</p><h2>把踩坑时间，<br>换成一杯饮料的钱。</h2><p>《AI 效率起步资料库》不是一堆链接，而是一套可以照着做的入门路径。适合不懂技术、想先得到实际结果的人。</p><ul><li><span>✓</span>24 个工具用途、价格与免费替代</li><li><span>✓</span>8 套办公与内容生产工作流</li><li><span>✓</span>50 条可直接修改的中文提示词</li><li><span>✓</span>持续更新，避免买完即过期</li></ul></div>
+      <div class="price-panel reveal"><div class="price-head"><span>FOUNDING EDITION</span><small>首发体验价</small></div><div class="price"><sup>¥</sup><strong>9.9</strong><del>¥29.9</del></div><p>数字资料 · 付款后按页面说明领取</p><a class="buy-button" href="./checkout.html">查看并获取 <span>→</span></a><small class="honest-note">购买前可先浏览本站免费内容，确认适合自己。</small></div>
+    </section>
+
+    <section class="method" id="method"><div class="section-heading reveal"><p class="eyebrow"><span></span>我们的筛选方法</p><h2>推荐之前，先回答四个问题。</h2></div><ol class="method-list"><li class="reveal"><span>01</span><h3>能否快速上手？</h3><p>普通用户是否能在 30 分钟内得到第一个结果。</p></li><li class="reveal"><span>02</span><h3>免费版够不够用？</h3><p>明确免费额度、付费门槛和更便宜的替代方案。</p></li><li class="reveal"><span>03</span><h3>结果是否可复用？</h3><p>优先选择能形成工作流，而非只带来一次新鲜感的工具。</p></li><li class="reveal"><span>04</span><h3>推荐是否透明？</h3><p>若链接含佣金会明确标注，不影响你的购买价格。</p></li></ol></section>
+
+    <section class="final-cta reveal"><p>别再收藏一百个工具。</p><h2>今天，先完成一件事。</h2><div><a class="button primary" href="#tools">开始选工具</a><a href="mailto:hello@zhiyingnav.com">合作与建议 →</a></div></section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="#top"><span class="brand-mark">智</span><strong>智盈导航</strong></a><p>© 2026 zhiyingnav.com · 理性使用 AI，结果不作承诺</p><nav><a href="./privacy.html">隐私</a><a href="./disclaimer.html">声明</a><a href="./terms.html">条款</a></nav></footer>
+  <script src="./home.js"></script>
+</body>
 </html>
